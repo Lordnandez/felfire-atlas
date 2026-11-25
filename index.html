@@ -111,7 +111,28 @@ button:hover{box-shadow:0 0 13px #73d95a25}
 #stage.detail-open #map,#stage.detail-open>.mapnote{display:none}
 @media(max-width:1150px){.zone-toolbar{flex-wrap:wrap}.map-controls{justify-content:flex-start;width:100%}.zone-detail-grid{grid-template-columns:minmax(0,1.4fr) minmax(290px,.9fr)}}
 @media(max-width:900px){.zone-detail-grid{grid-template-columns:1fr}.map-viewport{height:clamp(390px,68vh,720px)}.poi-list,.route-stops{max-height:230px}}
-@media(max-width:650px){body:after{inset:3px}.zone-explorer{padding:8px}.zone-toolbar{gap:9px}.zone-heading{min-width:45%}.map-controls{display:grid;grid-template-columns:1fr 1fr}.map-controls label,.map-controls select{width:100%;max-width:none}.map-viewport{height:65vh;min-height:360px}.detail-map-foot{flex-direction:column}.map-zoom{right:6px;top:6px}.poi-list,.route-stops{max-height:250px}}</style></head><body><div class="shell"><aside class="side"><div class="brand"><div class="crest"><svg viewBox="0 0 50 58" aria-label="Felfire crest"><path d="M25 2 46 10 42 39 25 55 8 39 4 10Z" fill="#192c32" stroke="#e8c777" stroke-width="2"/><path d="M25 43c-9-8-9-15-2-25 0 7 4 8 4 13 5-5 7-10 5-16 9 12 8 21-7 28Z" fill="#75d9a6"/><path d="M25 40c-4-4-3-8 1-12 0 4 4 6-1 12Z" fill="#f2cf79"/></svg></div><div><b>FELFIRE ATLAS</b><small>WARLOCK FIELD CODEX</small></div></div><div class="navcap">FIELD OPERATIONS</div><nav class="nav" id="nav"><button class="on" data-p="map"><span class="ico">⌖</span>Field Map</button><button data-p="level"><span class="ico">➤</span>Leveling</button><button data-p="quests"><span class="ico">✦</span>Quest Log</button><button data-p="dungeons"><span class="ico">⚔</span>Dungeons</button><button data-p="raids"><span class="ico">♜</span>Raids</button><button data-p="talent"><span class="ico">✧</span>Talent Build</button><button data-p="tailor"><span class="ico">♢</span>Tailoring</button><button data-p="enchant"><span class="ico">◇</span>Enchanting</button><button data-p="cook"><span class="ico">♨</span>Cooking</button><button data-p="aid"><span class="ico">✚</span>First Aid</button><button data-p="kits"><span class="ico">▤</span>Material Kits</button><button data-p="excel"><span class="ico">▣</span>Excel Preview</button></nav><div class="foot"><b>ALLIANCE ✦ GNOME / HUMAN</b><br>WoW Forever • Level 60 Era</div></aside><main>
+@media(max-width:650px){body:after{inset:3px}.zone-explorer{padding:8px}.zone-toolbar{gap:9px}.zone-heading{min-width:45%}.map-controls{display:grid;grid-template-columns:1fr 1fr}.map-controls label,.map-controls select{width:100%;max-width:none}.map-viewport{height:65vh;min-height:360px}.detail-map-foot{flex-direction:column}.map-zoom{right:6px;top:6px}.poi-list,.route-stops{max-height:250px}}
+/* In-page Destruction gear armory */
+.gear-browser{margin-top:10px;padding:13px;border:1px solid #876b37;border-radius:7px;background:linear-gradient(145deg,#201c15,#101713 72%);box-shadow:inset 0 1px #fff2,0 8px 22px #0006}
+.gear-controls{display:grid;grid-template-columns:repeat(4,minmax(135px,1fr));gap:9px;margin:10px 0 12px}
+.gear-controls label{display:grid;gap:4px;color:#d4c39b;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.gear-controls select,.gear-controls input{width:100%;min-width:0;padding:8px;border:1px solid #74603b;border-radius:4px;color:#f1e6cf;background:#10150f;font:12px "Segoe UI",sans-serif}
+.gear-controls select:focus,.gear-controls input:focus{outline:2px solid #8ac970;outline-offset:1px}
+.gear-status{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 10px;margin-bottom:10px;border:1px solid #51472f;border-radius:4px;background:#0b110edb;color:#bdb9a9;font-size:10px}
+.gear-status strong{color:#f1d17a;font:700 15px Georgia,serif;margin-right:7px}
+.gear-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.gear-item{min-width:0;padding:10px;border:1px solid #4d4a35;border-radius:5px;background:linear-gradient(145deg,#222820,#121713);box-shadow:inset 0 1px #ffffff0a;transition:transform .16s,border-color .16s}
+.gear-item:hover{transform:translateY(-2px);border-color:#e0bd61}
+.gear-item-top{display:flex;justify-content:space-between;gap:7px;align-items:center;color:#aeb5a5;font-size:8px;letter-spacing:.12em;text-transform:uppercase}
+.gear-slot{padding:3px 6px;border:1px solid #65583a;border-radius:12px;color:#e5cf8f;background:#171a13}
+.gear-item h4{margin:7px 0 4px;color:#f3dc9b;font:700 15px Georgia,serif}
+.gear-stats{margin:0 0 8px;color:#9fe0a0;font-size:10px}
+.gear-source{padding-top:7px;border-top:1px solid #393a2d;color:#c0bba9;font-size:9px;line-height:1.45}
+.gear-kind{display:inline-block;margin:0 0 4px;padding:2px 5px;border:1px solid #52634a;border-radius:3px;color:#b5dc94;background:#172017;font-size:8px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.gear-empty{padding:18px;text-align:center;border:1px dashed #65583a;border-radius:5px;color:#c7baa0}
+@media(max-width:950px){.gear-controls{grid-template-columns:repeat(2,minmax(130px,1fr))}.gear-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.gear-controls,.gear-grid{grid-template-columns:1fr}.gear-status{align-items:flex-start;flex-direction:column}}
+</style></head><body><div class="shell"><aside class="side"><div class="brand"><div class="crest"><svg viewBox="0 0 50 58" aria-label="Felfire crest"><path d="M25 2 46 10 42 39 25 55 8 39 4 10Z" fill="#192c32" stroke="#e8c777" stroke-width="2"/><path d="M25 43c-9-8-9-15-2-25 0 7 4 8 4 13 5-5 7-10 5-16 9 12 8 21-7 28Z" fill="#75d9a6"/><path d="M25 40c-4-4-3-8 1-12 0 4 4 6-1 12Z" fill="#f2cf79"/></svg></div><div><b>FELFIRE ATLAS</b><small>WARLOCK FIELD CODEX</small></div></div><div class="navcap">FIELD OPERATIONS</div><nav class="nav" id="nav"><button class="on" data-p="map"><span class="ico">⌖</span>Field Map</button><button data-p="level"><span class="ico">➤</span>Leveling</button><button data-p="quests"><span class="ico">✦</span>Quest Log</button><button data-p="dungeons"><span class="ico">⚔</span>Dungeons</button><button data-p="raids"><span class="ico">♜</span>Raids</button><button data-p="talent"><span class="ico">✧</span>Talent Build</button><button data-p="tailor"><span class="ico">♢</span>Tailoring</button><button data-p="enchant"><span class="ico">◇</span>Enchanting</button><button data-p="cook"><span class="ico">♨</span>Cooking</button><button data-p="aid"><span class="ico">✚</span>First Aid</button><button data-p="kits"><span class="ico">▤</span>Material Kits</button><button data-p="excel"><span class="ico">▣</span>Excel Preview</button></nav><div class="foot"><b>ALLIANCE ✦ GNOME / HUMAN</b><br>WoW Forever • Level 60 Era</div></aside><main>
 <div class="top"><span>AZEROTH FIELD CODEX / ALLIANCE DESTRUCTION WARLOCK</span><a href="https://onedrive.live.com/personal/b561a352f4f785dc/_layouts/15/doc.aspx?resid=8434ea4c-9b84-4d1d-a372-5846492ac87e&amp;cid=b561a352f4f785dc" target="_blank" rel="noopener">↗ EXCEL FIELD GUIDE</a></div>
 <section class="page show" id="p-map"><div class="hero"><div><div class="over">WORLD OF WARCRAFT: FOREVER • AZEROTH CARTOGRAPHY</div><h1>Field Atlas</h1><p>One map for leveling, profession farms, trainer stops, and warlock checkpoints. Choose a layer and level band, then click any zone for its field dossier.</p></div><div class="stamp">GNOME / HUMAN ROUTES • LEVEL 1–60</div></div><div class="stats"><div class="stat"><b>1–60</b><span>Alliance campaign</span></div><div class="stat"><b>4</b><span>Professions to 300</span></div><div class="stat"><b>51</b><span>Talent points</span></div><div class="stat"><b>1 map</b><span>Zones + farm camps</span></div></div>
 <div class="card"><div class="head"><h2>Interactive Azeroth Operations Map</h2><div class="tools"><label>Layer <select id="layer"><option>Leveling</option><option>Tailoring</option><option>Enchanting</option><option>Cooking</option><option>First Aid</option><option>Warlock</option><option>Quests</option><option>Dungeons</option><option>Raids</option><option>All Layers</option></select></label><label>Level <select id="bracket"><option>Any Level</option><option>1–10</option><option>10–20</option><option>20–30</option><option>30–40</option><option>40–50</option><option>50–60</option></select></label><label>Race <select id="race"><option>Gnome</option><option>Human</option></select></label><label>Zone <select id="zonePick"></select></label></div></div>
@@ -201,12 +222,22 @@ button:hover{box-shadow:0 0 13px #73d95a25}
 <tr><td>55–60</td><td>Blackmaw Hold</td><td>Azshara</td><td>Late leveling five-player route.</td><td>Good pre-raid practice; compare caster pieces to your level-60 pre-raid list.</td><td><button class="plot-btn" onclick="plotZone('blackmaw','Dungeons')">Plot</button></td></tr>
 <tr><td>58–60</td><td>Shaper’s Terrace</td><td>Un’Goro Crater</td><td>Late leveling and endgame five-player stop.</td><td>Use it to fill a weak slot before level-60 raid prep.</td><td><button class="plot-btn" onclick="plotZone('shaper','Dungeons')">Plot</button></td></tr>
 </tbody></table></div></div>
-<div class="split"><div class="card"><div class="head"><h3>Destruction Upgrade Checkpoints</h3><small>LIVE GEAR DATABASE LINKED</small></div><div class="body tiles">
-<div class="tile"><h3>Level 20</h3><p><strong>Staff of Soran’ruk</strong> from the Orb of Soran’ruk Warlock quest chain (Shadowfang Keep); other useful early pieces are quest/crafted.</p></div>
-<div class="tile"><h3>Level 30</h3><p><strong>City of Dalaran</strong> is a major source in the current Destro sheet. Targets include Guardian’s Emblem, Tattered Kirin Tor Cloak, and Violet Sorcerer’s Vestments.</p></div>
-<div class="tile"><h3>Level 40–50</h3><p>Level 40 favors <strong>Scarlet Monastery</strong> and crafted gear; level 50 shifts toward <strong>Blackrock Depths</strong> and crafted upgrades.</p></div>
-<div class="tile"><h3>Level 60 Pre-Raid</h3><p><strong>Spellweaver’s Turban</strong> (Blackrock Spire), <strong>Nacreous Shell Necklace</strong> (Stratholme), and <strong>Rockfury Bracers</strong> (Silithus quest) are notable Spell Power/Hit upgrades.</p></div>
-</div><div class="body"><a class="link" href="https://wowhandbook.com/bis/warlock/destruction/" target="_blank" rel="noopener">OPEN EVERY SLOT • LEVEL 20 / 30 / 40 / 50 / PRE-RAID 60 ↗</a><a class="link" href="https://wowforevercompass.com/bis-list/warlock/" target="_blank" rel="noopener">FULL WARLOCK EQUIPPABLE ITEMS & SOURCES ↗</a><p class="farm">The linked Warlock lists show upgrades by slot and level, including dungeon drops, quests, crafting and reputation. Check the current item source before farming; realm tuning can change values.</p><div class="workbook-frame gear-frame"><iframe loading="lazy" src="https://wowhandbook.com/bis/warlock/destruction/" title="Destruction Warlock gear by level and slot"></iframe></div><p class="farm">If the live gear sheet is blocked in the embedded view, use the full guide button above; it includes all slots and alternatives at levels 20, 30, 40, 50 and 60.</p></div></div>
+<div class="split"><div class="card"><div class="head"><h3>Destruction Warlock Gear Armory</h3><small>ALLIANCE • ON-PAGE GEAR BY LEVEL & SLOT</small></div><div class="body">
+<div class="tiles"><div class="tile"><h3>Level 20</h3><p>Early quest, dungeon, and tailoring upgrades, including <strong>Staff of Soran’ruk</strong>.</p></div><div class="tile"><h3>Level 30</h3><p>Target City of Dalaran gear and Scarlet/Razorfen upgrades; check the loadout for each slot.</p></div><div class="tile"><h3>Level 40–50</h3><p>Mix Scarlet Monastery, Blackrock Depths, quests, and crafted spell-power pieces.</p></div><div class="tile"><h3>Level 60 Pre-Raid</h3><p>Dungeon, quest, vendor, and crafted upgrades before raiding, with sources beside every item.</p></div></div>
+<p class="farm">The gear list now renders inside this page. Choose a level, slot, or source and search item names or farming locations. The selections below are the Alliance recommendations from the linked Forever gear guide.</p>
+<div class="gear-browser" id="gearBrowser">
+<div class="gear-controls">
+<label>Level checkpoint<select id="gearLevel" aria-label="Select gear level"><option value="20">Level 20</option><option value="30">Level 30</option><option value="40">Level 40</option><option value="50">Level 50</option><option value="60">Level 60 • Pre-Raid</option></select></label>
+<label>Equipment slot<select id="gearSlot" aria-label="Filter gear by slot"><option value="all">All slots</option></select></label>
+<label>Get it from<select id="gearSource" aria-label="Filter gear by source"><option value="all">All sources</option><option>Dungeon drop</option><option>Quest</option><option>Crafted</option><option>Vendor</option><option>World drop</option></select></label>
+<label>Find item or place<input id="gearSearch" type="search" placeholder="Try “Blackrock Depths”…" aria-label="Search gear and sources"></label>
+</div>
+<div class="gear-status" aria-live="polite"><span><strong id="gearCount">—</strong><span id="gearSummary">Alliance gear picks</span></span><span class="badge active">SPELL POWER • HIT • INTELLECT</span></div>
+<div class="gear-grid" id="gearGrid" aria-live="polite"></div>
+</div>
+<div class="source"><a href="https://wowhandbook.com/bis/warlock/destruction/" target="_blank" rel="noopener">CHECK FULL LIVE GEAR GUIDE ↗</a><a href="https://wowforevercompass.com/bis-list/warlock/" target="_blank" rel="noopener">OTHER WARLOCK GEAR SOURCES ↗</a></div>
+<p class="farm">Item/source details are shown here so the guide stays usable even when other sites block embedded previews. Realm tuning can change item values; use the source link for its latest alternatives.</p>
+</div></div>
 <div class="card"><div class="head"><h3>Classic Companion Instances</h3><small>OPTIONAL ALLIANCE PARTY STOPS</small></div><div class="body routecards"><div class="tile"><h3>17–26 • Deadmines</h3><p>Alliance-friendly early group. Warlock quest item <strong>Staff of Soran’ruk</strong> is tied to Shadowfang Keep’s class chain, not a Deadmines drop.</p></div><div class="tile"><h3>22–30 • Stockade / Shadowfang Keep</h3><p>Stockade is convenient in Stormwind; Shadowfang Keep offers the Warlock quest chain and early caster drops.</p></div><div class="tile"><h3>29–40 • Gnomeregan / Scarlet Monastery</h3><p>Gnomeregan is a natural Gnome party run; Scarlet Monastery becomes a strong level-40 caster gear target.</p></div><div class="tile"><h3>50–60 • BRD / Blackrock Spire / Scholomance / Stratholme</h3><p>Finish pre-raid slots and learn mechanics before the new Forever raids.</p></div></div></div>
 <div class="source"><a href="https://worldofwarcraft.blizzard.com/en-us/news/24301455/" target="_blank" rel="noopener">Blizzard: new dungeon locations & levels</a><a href="https://wowhandbook.com/bis/warlock/destruction/" target="_blank" rel="noopener">Destruction gear by level</a><a href="https://wowforevercompass.com/bis-list/warlock/" target="_blank" rel="noopener">Warlock item index</a></div>
 </section><section class="page" id="p-raids"><div class="hero"><div><div class="over">Level-60 endgame • Alliance attunement checklist</div><h1>Raid War Room</h1><p>Plan a level-60 roster, travel, attunements and gear. Raid availability and loot data are labeled separately so the guide doesn’t promise items before the live tables are confirmed.</p></div><div class="stamp">LEVEL 60 • FIRST RAIDS OPEN DEC 9, 2026</div></div>
@@ -679,4 +710,111 @@ document.getElementById('zoneMapArt').ondragstart=e=>e.preventDefault();
 document.getElementById('layer').onchange=()=>{drawMap();if(!document.getElementById('zoneExplorer').hidden){const pickVal=document.getElementById('layer').value;if(['Tailoring','Enchanting','Cooking','First Aid','Leveling','Warlock'].includes(pickVal)){activePlan=pickVal==='Leveling'?'Leveling Route':pickVal==='Warlock'?'Warlock Talents':pickVal;document.getElementById('mapGuide').value=activePlan;populateStepPicker(true);renderRouteStepCard();renderRouteStops();renderMapPins()}}};
 document.getElementById('bracket').onchange=drawMap;
 drawMap();
+
+/* Local gear data keeps the Dungeon tab readable when other sites block embeds. */
+const warlockGearData={
+20:[
+["Head","Pristine Circlet","+10 Stamina · +18 Healing Power · +6 Spell Power","Crafted · Tailoring 125 · crafter only","Crafted"],
+["Neck","Mark of the Pack Leader","+5 Strength · +5 Intellect","Humar the Pridelord · The Barrens","World drop"],
+["Shoulder","Magician's Mantle","+9 Intellect · +5 Spell Power","Brontus · The Barrens","World drop"],
+["Back","Heavy Woolen Cloak","+4 Spirit · +4 Spell Power","Crafted · Tailoring 105","Crafted"],
+["Chest","Dro'zem's Tunic","+9 Intellect · +11 Spell Power","Dro'zem the Blasphemous · Redridge Mountains","World drop"],
+["Wrist","Aetherwisp Bracers","+3 Spell Power","Faldrim Anvilmar · The Hall of Thanes","Dungeon drop"],
+["Hands","Serpent Gloves","+6 Agility · +7 Spell Power","Lord Serpentis · Wailing Caverns","Dungeon drop"],
+["Waist","Pristine Sash","+4 Intellect · +5 Stamina · +11 Healing Power · +4 Spell Power","Crafted · Tailoring 110 · crafter only","Crafted"],
+["Legs","Filigreed Pristine Leggings","+6 Intellect · +5 Stamina · +4 Spirit · +18 Healing Power · +6 Spell Power","Crafted · Tailoring 105 · crafter only","Crafted"],
+["Feet","Spidersilk Boots","+4 Intellect · +4 Stamina · +7 Spell Power","Crafted · Tailoring 125","Crafted"],
+["Ring","Philanthropist's Ring","+5 Intellect · +10 Spell Power","Quest · Greater Friend of the Library","Quest"],
+["Ring","Minor Channeling Ring","+2 Intellect · +5 Spell Power","Quest · WANTED: Chok'sul · Loch Modan","Quest"],
+["Main Hand","Staff of Soran'ruk","15.7 DPS · +14 Stamina · +34 Shadow Damage · +34 Fire Damage","Quest · The Orb of Soran'ruk · Shadowfang Keep","Quest"],
+["Ranged","Spellcrafter Wand","20.3 DPS · +4 Spell Power","Quest · Retrieval for Mauren · Stonetalon Mountains","Quest"]
+],
+30:[
+["Head","Silk Headband","+8 Stamina · +9 Spell Power","Crafted · Tailoring 135","Crafted"],
+["Neck","Guardian's Emblem","+8 Stamina · +6 Spell Power","Trash mobs · City of Dalaran","Dungeon drop"],
+["Shoulder","Violet Sorcerer's Mantle","+9 Intellect · +4 Spell Penetration","Shade of the Archmage · City of Dalaran","Dungeon drop"],
+["Back","Tattered Kirin Tor Cloak","+8 Intellect · +0.5% Hit","Trash mobs · City of Dalaran","Dungeon drop"],
+["Chest","Violet Sorcerer's Robes","+15 Intellect · +9 Spell Power","Arcanic Enigma · City of Dalaran","Dungeon drop"],
+["Wrist","Arcane Runed Bracers","+1 Stamina · +9 Spell Power","Quest · WANTED: Marez Cowl · Arathi Highlands","Quest"],
+["Hands","Violet Sorcerer's Wraps","+9 Intellect · +1% Hit","Trash mobs · City of Dalaran","Dungeon drop"],
+["Waist","Blightleaf Rope","+10 Intellect · +7 Spell Power","Fel Ancient · City of Dalaran","Dungeon drop"],
+["Legs","Violet Sorcerer's Leggings","+5 Spirit · +13 Intellect · +12 Spell Power","Trash mobs · City of Dalaran","Dungeon drop"],
+["Feet","Violet Sorcerer's Sandals","+7 Stamina · +11 Intellect","Trash mobs · City of Dalaran","Dungeon drop"],
+["Ring","Philanthropist's Ring","+5 Intellect · +10 Spell Power","Quest · Greater Friend of the Library","Quest"],
+["Ring","Ring of Forlorn Spirits","+2 Stamina · +8 Spell Power","Quest · The Legend of Stalvan · Duskwood","Quest"],
+["Main Hand","Swinetusk Shank","15.3 DPS · +6 Stamina · +4 Spirit · +40 Spell Power","Agathelos the Raging · Razorfen Kraul","Dungeon drop"],
+["Off Hand","Raptor's Gaze","+4 Stamina · +4 Intellect · +8 Spell Power","Shadetooth · Excavation Site: Wetlands","World drop"],
+["Ranged","Master Hunter's Wand","34.7 DPS · +7 Spell Power","Quest · Big Game Hunter · Stranglethorn Vale","Quest"]
+],
+40:[
+["Head","Spellpower Goggles Xtreme Plus","+27 Spell Power","Crafted · Engineering 290 · crafter only","Crafted"],
+["Neck","Glowing Eye of Mordresh","+8 Intellect · +20 Healing Power · +7 Spell Power","Mordresh Fire Eye · Razorfen Downs","Dungeon drop"],
+["Shoulder","Bloodmage Mantle","+9 Intellect · +9 Spell Power","Bloodmage Thalnos · Scarlet Monastery","Dungeon drop"],
+["Back","Tattered Kirin Tor Cloak","+8 Intellect · +0.5% Hit","Trash mobs · City of Dalaran","Dungeon drop"],
+["Chest","Dreamweave Vest","+14 Spirit · +9 Intellect · +18 Spell Power","Crafted · Tailoring 205","Crafted"],
+["Wrist","Arcane Runed Bracers","+1 Stamina · +9 Spell Power","Quest · WANTED: Marez Cowl · Arathi Highlands","Quest"],
+["Hands","Dreamweave Gloves","+7 Spirit · +4 Intellect · +18 Spell Power","Crafted · Tailoring 205","Crafted"],
+["Waist","Star Belt","+4 Spirit · +13 Spell Power","Crafted · Tailoring 185","Crafted"],
+["Legs","Red Mageweave Pants","+12 Intellect · +14 Spell Power","Crafted · Tailoring 195","Crafted"],
+["Feet","Southsea Mojo Boots","+11 Intellect · +8 Spell Power","Quest · Southsea Shakedown · Tanaris","Quest"],
+["Ring","Philanthropist's Ring","+5 Intellect · +10 Spell Power","Quest · Greater Friend of the Library","Quest"],
+["Ring","Ring of Forlorn Spirits","+2 Stamina · +8 Spell Power","Quest · The Legend of Stalvan · Duskwood","Quest"],
+["Main Hand","Hypnotic Blade","17.5 DPS · +8 Intellect · +3 Spirit · +44 Spell Power","Arcanist Doan · Scarlet Monastery","Dungeon drop"],
+["Off Hand","Orb of the Forgotten Seer","+14 Spell Power","Bloodmage Thalnos · Scarlet Monastery","Dungeon drop"],
+["Ranged","Master Hunter's Wand","34.7 DPS · +7 Spell Power","Quest · Big Game Hunter · Stranglethorn Vale","Quest"]
+],
+50:[
+["Head","Spellpower Goggles Xtreme Plus","+27 Spell Power","Crafted · Engineering 290 · crafter only","Crafted"],
+["Neck","Archlight Talisman","+10 Intellect · +8 Stamina · +12 Spell Power","Quest · Hidden Treasures · Eastern Plaguelands","Quest"],
+["Shoulder","Kentic Amice","+13 Intellect · +6 Spirit · +6 Stamina · +14 Spell Power","High Interrogator Gerstahn · Blackrock Depths","Dungeon drop"],
+["Back","Spritecaster Cape","+5 Stamina · +6 Intellect · +6 Spirit · +14 Spell Power","Houndmaster Grebmar · Blackrock Depths","Dungeon drop"],
+["Chest","Robes of Servitude","+15 Stamina · +10 Intellect · +23 Fire Damage · +23 Shadow Damage","Class quest · Trolls of a Feather","Quest"],
+["Wrist","Nethergeld Cuffs","+7 Intellect · +7 Stamina · +5 Spirit · +20 Healing Power · +7 Spell Power","Crafted · Tailoring 220 · crafter only","Crafted"],
+["Hands","Gloves of Undead Cleansing","+10 Stamina · +10 Intellect · +18 Spell Power","Quest · Argent Dawn Gloves","Quest"],
+["Waist","Ban'thok Sash","+10 Stamina · +10 Intellect · +1% Hit · +12 Spell Power","Ring of Law: Ok'thor the Breaker · Blackrock Depths","Dungeon drop"],
+["Legs","Spellshock Leggings","+10 Intellect · +9 Stamina · +23 Spell Power","Trash mobs · Zul'Farrak","Dungeon drop"],
+["Feet","Gilded Sandals","+9 Intellect · +13 Stamina · +31 Healing Power · +11 Spell Power","Crafted · Tailoring 250 · crafter only","Crafted"],
+["Ring","Brainlash","+10 Intellect · +5 Spirit · +11 Spell Power","Trash mobs · Zul'Farrak","Dungeon drop"],
+["Ring","Cyclopean Band","+4 Spirit · +4 Strength · +7 Intellect · +8 Stamina · +9 Spell Power","Ring of Law: Ok'thor the Breaker · Blackrock Depths","Dungeon drop"],
+["Trinket","Abyss Shard","+12 Spell Power","Class quest · Trolls of a Feather","Quest"],
+["Trinket","Frozen Heart of the Mountain","+0.9% Hit","Crafted · Enchanting 285 · crafter only","Crafted"],
+["Main Hand","Arbiter's Blade","23.3 DPS · +5 Intellect · +8 Stamina · +0.7% Hit · +60 Spell Power","Warder Stilgiss · Blackrock Depths","Dungeon drop"],
+["Off Hand","Spirit of Aquementas","+21 Spell Power","Quest · It's Dangerous to Go Alone · Un'Goro Crater","Quest"],
+["Ranged","Lesser Eternal Wand","45.8 DPS · +8 Spell Power","Crafted · Enchanting 265","Crafted"]
+],
+60:[
+["Head","Spellweaver's Turban","+13 Spirit · +33 Spell Power · +1% Hit","General Drakkisath · Blackrock Spire","Dungeon drop"],
+["Neck","Nacreous Shell Necklace","+7 Stamina · +8 Intellect · +1% Hit · +9 Spell Power","Cannon Master Willey · Stratholme","Dungeon drop"],
+["Shoulder","Mantle of the Timbermaw","+13 Intellect · +17 Spell Power · +1% Critical Strike","Crafted · Tailoring 305","Crafted"],
+["Back","Arcanoweave Cloak","+8 Intellect · +16 Spell Power · +1% Hit","Vendor · Pix Xizzix · Stranglethorn Vale","Vendor"],
+["Chest","Robe of the Archmage","+12 Intellect · +40 Spell Power · +1% Critical Strike","Crafted · Tailoring 310 · crafter only","Crafted"],
+["Wrist","Rockfury Bracers","+7 Stamina · +27 Spell Power · +1% Hit","Quest · Stalwart's Battlegear · Silithus","Quest"],
+["Hands","Deathmist Wraps","+16 Stamina · +13 Intellect · +13 Spell Power · +1% Hit","Class quest · Just Compensation · Ironforge","Quest"],
+["Waist","Belt of the Archmage","+16 Intellect · +10 Stamina · +20 Spell Power · +1% Critical Strike","Crafted · Tailoring 310","Crafted"],
+["Legs","Skyshroud Leggings","+11 Stamina · +12 Intellect · +30 Spell Power","Highlord Omokk · Blackrock Spire","Dungeon drop"],
+["Feet","Omnicast Boots","+12 Intellect · +8 Stamina · +20 Spell Power","Golem Lord Argelmach · Blackrock Depths","Dungeon drop"],
+["Ring","Elemental Focus Band","+11 Intellect · +8 Stamina · +22 Spell Power","Prince Skaldrenox · Silithus","World drop"],
+["Ring","Channeler's Ring","+14 Intellect · +1% Hit · +9 Spell Power","Vendor · Pix Xizzix · Stranglethorn Vale","Vendor"],
+["Trinket","Weakness Analyzer","+18 Spell Power","Vendor · Pix Xizzix · Stranglethorn Vale","Vendor"],
+["Trinket","Abyss Shard","+12 Spell Power","Class quest · Trolls of a Feather","Quest"],
+["Main Hand","Verimonde's Last Resort","28.9 DPS · +7 Stamina · +8 Intellect · +74 Spell Power","Quest · Superior Armaments of Battle · Friend of the Dawn · Eastern Plaguelands","Quest"],
+["Off Hand","Tome of the Lost","+7 Intellect · +8 Stamina · +18 Spell Power","General Drakkisath · Blackrock Spire","Dungeon drop"],
+["Ranged","Bonecreeper Stylus","62.6 DPS · +5 Intellect · +11 Spell Power","Darkmaster Gandling · Scholomance","Dungeon drop"]
+]};
+const gearEsc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function renderWarlockGear(){
+ const level=document.getElementById("gearLevel").value;
+ const slot=document.getElementById("gearSlot").value;
+ const source=document.getElementById("gearSource").value;
+ const query=document.getElementById("gearSearch").value.trim().toLowerCase();
+ const rows=(warlockGearData[level]||[]).filter(r=>(slot==="all"||r[0]===slot)&&(source==="all"||r[4]===source)&&(!query||r.join(" ").toLowerCase().includes(query)));
+ document.getElementById("gearCount").textContent=rows.length;
+ document.getElementById("gearSummary").textContent="items shown • Level "+level+(level==="60"?" pre-raid":"")+" Alliance picks";
+ document.getElementById("gearGrid").innerHTML=rows.length?rows.map(r=>'<article class="gear-item"><div class="gear-item-top"><span class="gear-slot">'+gearEsc(r[0])+'</span><small>LEVEL '+gearEsc(level)+'</small></div><h4>'+gearEsc(r[1])+'</h4><p class="gear-stats">'+gearEsc(r[2])+'</p><div class="gear-source"><span class="gear-kind">'+gearEsc(r[4])+'</span><br>'+gearEsc(r[3])+'</div></article>').join(""):'<div class="gear-empty">No matching gear in this checkpoint. Clear a filter to browse all picks.</div>';
+}
+const gearSlotSelect=document.getElementById("gearSlot");
+[...new Set(Object.values(warlockGearData).flatMap(rows=>rows.map(r=>r[0])))].forEach(slot=>{const o=document.createElement("option");o.value=slot;o.textContent=slot;gearSlotSelect.appendChild(o)});
+["gearLevel","gearSlot","gearSource"].forEach(id=>document.getElementById(id).addEventListener("change",renderWarlockGear));
+document.getElementById("gearSearch").addEventListener("input",renderWarlockGear);
+renderWarlockGear();
 </script></body></html>
