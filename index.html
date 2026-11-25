@@ -62,74 +62,90 @@ tbody tr:hover{background:#57743825}
 button,select,a.link{transition:border-color .18s,box-shadow .18s,transform .18s}
 button:hover{box-shadow:0 0 13px #73d95a25}
 .link{border-color:#856a37;color:#f0d37d;background:linear-gradient(100deg,#251e14,#182219)}
-/* In-zone expedition detail */
-.zone-explorer{margin:0;border-top:1px solid #997333;background:linear-gradient(180deg,#17140e,#0d100d);padding:14px}
+/* High-resolution in-game zone maps and coordinate-true route overlays */
+.zone-explorer{margin:0;border-top:1px solid #a98742;background:radial-gradient(ellipse at 50% 0,#25311c 0,transparent 55%),linear-gradient(180deg,#17140e,#0d100d);padding:14px}
 .zone-explorer[hidden]{display:none}
-.zone-toolbar{display:flex;align-items:center;gap:14px;margin-bottom:12px;padding:10px 12px;border:1px solid #594629;border-radius:6px;background:linear-gradient(95deg,#332515,#171711 57%,#112117);box-shadow:inset 0 1px #ffffff14}
-.world-return,.detail-filter select{border:1px solid #927039;background:#17150f;color:#f0d98d;border-radius:4px;padding:9px 12px;font:700 10px Georgia,serif;letter-spacing:1px;cursor:pointer}
-.world-return:hover{border-color:#8be17a;box-shadow:0 0 14px #74d65c33}
-.zone-heading{display:grid;flex:1;gap:2px}.zone-heading span{color:#a58a53;font-size:9px;letter-spacing:2px}.zone-heading strong{font:700 23px Georgia,serif;color:#f3d789;text-shadow:0 2px 8px #000}
-.detail-filter{display:flex;align-items:center;gap:8px;color:#b6a77c;font-size:9px;letter-spacing:1px}.detail-filter select{padding:8px}
-.zone-detail-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.8fr);gap:12px}
-.detail-map-shell{min-width:0;border:1px solid #80612f;border-radius:6px;overflow:hidden;background:#10150f;box-shadow:inset 0 0 35px #000b,0 8px 24px #0008}
-#zoneDetailMap{display:block;width:100%;height:auto;min-height:330px;background:#10150f}
-.detail-land{fill:url(#detailGround);stroke:#94713b;stroke-width:3}
-.detail-coast{fill:none;stroke:#d0a64d;stroke-opacity:.25;stroke-width:1;stroke-dasharray:3 8}
-.detail-contours{fill:none;stroke:#c5b37c;stroke-opacity:.16;stroke-width:1.4}
-.detail-river{fill:none;stroke:#69b9b7;stroke-opacity:.62;stroke-width:5;stroke-linecap:round}
-.detail-road{fill:none;stroke:#d5b771;stroke-opacity:.5;stroke-width:3;stroke-dasharray:8 5}
-.detail-map-label{fill:#d6c58f;font-size:10px;letter-spacing:1.6px;font-family:Georgia,serif;opacity:.78}
-.detail-map-foot{display:flex;justify-content:space-between;gap:12px;padding:9px 12px;border-top:1px solid #4a3b25;color:#a99a72;background:#14140f;font-size:8px;letter-spacing:.8px}
-.zone-poi-panel{min-width:0;border:1px solid #69512d;border-radius:6px;padding:13px;background:linear-gradient(165deg,#211c14,#111511);box-shadow:inset 0 1px #ffffff10}
-.poi-summary>span{color:#8fd47b;font-size:9px;font-weight:800;letter-spacing:1.5px}.poi-summary h3{margin:4px 0;color:#f0d27c;font:700 22px Georgia,serif}.poi-summary p{margin:0;color:#c4bda9;font-size:11px;line-height:1.5}
-.poi-legend{display:flex;flex-wrap:wrap;gap:7px 11px;margin:12px 0;padding:10px 0;border-top:1px solid #52432b;border-bottom:1px solid #52432b;color:#bdb49d;font-size:9px}
-.poi-legend span{display:flex;align-items:center;gap:5px}.poi-dot{width:10px;height:10px;border-radius:50%;display:inline-block;border:1px solid #fff6}.poi-dot.trainer{background:#65c8cf}.poi-dot.vendor{background:#e5b548}.poi-dot.farm{background:#78d65e}.poi-dot.quest{background:#a994e5}.poi-dot.dungeon{background:#d88b45}.poi-dot.raid{background:#e26850}
-.poi-list-head{display:flex;justify-content:space-between;align-items:center;margin:9px 0;color:#e9cf82;font-size:10px;letter-spacing:1px}.poi-list-head small{color:#9c9279}
-.poi-list{display:grid;gap:6px;max-height:235px;overflow:auto;padding-right:3px}
-.poi-row{display:grid;grid-template-columns:28px 1fr;gap:8px;text-align:left;width:100%;padding:8px;border:1px solid #4f422a;border-radius:4px;background:linear-gradient(100deg,#211d15,#141713);color:#ded5bf;cursor:pointer}
-.poi-row:hover,.poi-row.active{border-color:#8ecb63;background:linear-gradient(100deg,#292419,#172318);box-shadow:0 0 10px #76d14b22}
-.poi-icon,.pin-core{display:grid;place-items:center;border:1px solid currentColor;border-radius:50%;font:800 11px Georgia,serif;color:#fff;width:26px;height:26px;background:#171713;box-shadow:0 0 11px currentColor}
-.poi-icon.trainer{color:#65c8cf}.poi-icon.vendor{color:#e5b548}.poi-icon.farm{color:#78d65e}.poi-icon.quest{color:#a994e5}.poi-icon.dungeon{color:#d88b45}.poi-icon.raid{color:#e26850}
-.poi-row strong{display:block;font:700 12px Georgia,serif;color:#f1d887}.poi-row small{display:block;margin-top:2px;color:#a9a18d;font-size:9px}
-.poi-inspect{min-height:58px;margin-top:9px;padding:9px 10px;border-left:2px solid #75d05c;background:#0d120e;color:#c9c0aa;font-size:10px;line-height:1.5}
-.map-pin{cursor:pointer;filter:url(#poiGlow)}.map-pin .pin-ring{fill:#10150fdd;stroke-width:3}.map-pin .pin-core{fill:#1c2118;stroke-width:2}.map-pin text.pin-icon{font:800 12px Georgia,serif;text-anchor:middle;dominant-baseline:central;pointer-events:none}.map-pin text.pin-name{font:700 10px Georgia,serif;fill:#f0e2bd;paint-order:stroke;stroke:#11150f;stroke-width:3px;stroke-linejoin:round}.map-pin:hover .pin-ring,.map-pin.selected .pin-ring{stroke-width:5}.map-pin.farm .pin-ring{stroke:#78d65e}.map-pin.trainer .pin-ring{stroke:#65c8cf}.map-pin.vendor .pin-ring{stroke:#e5b548}.map-pin.quest .pin-ring{stroke:#a994e5}.map-pin.dungeon .pin-ring{stroke:#d88b45}.map-pin.raid .pin-ring{stroke:#e26850}.map-pin.hidden-point{display:none}
+.zone-toolbar{display:flex;align-items:center;gap:13px;margin-bottom:12px;padding:10px 12px;border:1px solid #745729;border-radius:7px;background:linear-gradient(95deg,#332515,#171711 57%,#112117);box-shadow:inset 0 1px #ffffff14,0 8px 24px #0006}
+.world-return,.map-controls select{border:1px solid #927039;background:#17150f;color:#f0d98d;border-radius:4px;padding:9px 10px;font:700 10px Georgia,serif;letter-spacing:.7px;cursor:pointer}
+.world-return:hover,.map-controls select:focus{border-color:#8be17a;box-shadow:0 0 14px #74d65c33}
+.zone-heading{display:grid;gap:2px;min-width:160px}.zone-heading span{color:#a58a53;font-size:8px;letter-spacing:1.6px}.zone-heading strong{font:700 21px Georgia,serif;color:#f3d789;text-shadow:0 2px 8px #000}
+.map-controls{display:flex;align-items:end;justify-content:flex-end;flex:1;gap:7px;flex-wrap:wrap}
+.map-controls label{display:grid;gap:3px;color:#a99971;font-size:8px;font-weight:800;letter-spacing:1px}
+.map-controls select{max-width:190px;padding:7px 8px;font:700 10px "Segoe UI",system-ui,sans-serif;letter-spacing:0}
+.zone-detail-grid{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(300px,.8fr);gap:12px;align-items:start}
+.detail-map-shell{min-width:0;border:1px solid #80612f;border-radius:7px;overflow:hidden;background:#10150f;box-shadow:inset 0 0 35px #000b,0 8px 24px #0008}
+.map-viewport{position:relative;isolation:isolate;width:100%;height:clamp(420px,68vh,780px);overflow:hidden;background:#151b16;cursor:grab;touch-action:none}
+.map-viewport.dragging{cursor:grabbing}
+.map-canvas{position:absolute;left:0;top:0;width:100%;transform-origin:0 0;will-change:transform;user-select:none}
+#zoneMapArt{display:block;width:100%;height:auto;max-width:none;pointer-events:none;user-select:none}
+.detail-pin-layer{position:absolute;inset:0;overflow:visible}
+.map-zoom{position:absolute;z-index:5;right:12px;top:12px;display:flex;gap:5px;padding:5px;border:1px solid #d1ad6c66;border-radius:6px;background:#11140fdd;box-shadow:0 3px 15px #0009}
+.map-zoom button{min-width:32px;height:30px;border:1px solid #8e703b;border-radius:4px;background:linear-gradient(#32291a,#171711);color:#f0d27c;font:800 15px Georgia,serif;cursor:pointer}
+.map-zoom button:hover{border-color:#a9e278;box-shadow:0 0 12px #8bd65b55}
+.map-zoom #zoomReset,.map-zoom #mapFullscreen{font:800 9px "Segoe UI",system-ui,sans-serif}
+.map-pin{position:absolute;left:var(--px);top:var(--py);transform:translate(-50%,-50%);width:26px;height:26px;padding:0;border:2px solid var(--pin-color);border-radius:50%;background:#111a11ed;color:white;font:900 11px Georgia,serif;text-align:center;line-height:22px;cursor:pointer;box-shadow:0 0 8px #000,0 0 12px color-mix(in srgb,var(--pin-color),transparent 25%);transition:transform .12s,box-shadow .12s;z-index:2}
+.map-pin:hover,.map-pin.selected{transform:translate(-50%,-50%) scale(1.3);z-index:4;box-shadow:0 0 0 4px #f2d58b55,0 0 18px var(--pin-color)}
+.map-pin.trainer{--pin-color:#61cee1}.map-pin.vendor{--pin-color:#f3bd54}.map-pin.farm{--pin-color:#8ddb61}.map-pin.quest{--pin-color:#c6a3f3}
+.map-pin.selected:after{content:attr(data-label);position:absolute;left:50%;top:-9px;transform:translate(-50%,-100%);padding:4px 7px;white-space:nowrap;border:1px solid var(--pin-color);border-radius:3px;background:#10140ff2;color:#fff0c5;font:700 10px Georgia,serif;box-shadow:0 2px 9px #0009;pointer-events:none}
+.map-load-error{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);z-index:6;display:grid;gap:7px;min-width:260px;max-width:90%;padding:18px;border:1px solid #9a6535;border-radius:7px;background:#141611f2;color:#d7ceb7;text-align:center;box-shadow:0 8px 32px #000b}
+.map-load-error[hidden]{display:none}.map-load-error strong{font:700 16px Georgia,serif;color:#f1d687}.map-load-error span{font-size:11px}.map-load-error a,.detail-map-foot a{color:#d4b66f;text-decoration:none;font-weight:800}.map-load-error a:hover,.detail-map-foot a:hover{color:#9fe075;text-decoration:underline}
+.detail-map-foot{display:flex;justify-content:space-between;gap:12px;padding:9px 12px;border-top:1px solid #4a3b25;color:#a99a72;background:#14140f;font-size:8px;letter-spacing:.5px}
+.zone-poi-panel{min-width:0;border:1px solid #69512d;border-radius:7px;padding:13px;background:linear-gradient(165deg,#211c14,#111511);box-shadow:inset 0 1px #ffffff10}
+.poi-summary>span{color:#8fd47b;font-size:9px;font-weight:800;letter-spacing:1.5px}.poi-summary h3{margin:4px 0;color:#f0d27c;font:700 19px Georgia,serif}.poi-summary p{margin:0;color:#c4bda9;font-size:11px;line-height:1.5}
+.route-step-card{margin:11px 0;padding:11px 12px;border:1px solid #67502c;border-left:3px solid #c9a04d;border-radius:4px;background:linear-gradient(110deg,#2a2115,#141912);color:#c8bea5;font-size:10px;line-height:1.5}
+.route-step-card strong{color:#f0d27c;font:800 9px Georgia,serif;letter-spacing:1.1px}.route-step-card h4{margin:5px 0;color:#f3e5c5;font-size:13px}.route-step-card p{margin:4px 0}.route-step-card .route-meta{color:#8ed27b;font-size:9px;font-weight:800;letter-spacing:.7px}.route-step-card .rank-alert{padding:6px 8px;border-left:2px solid #e8bd54;background:#322715;color:#f3d488}.route-step-card .route-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px}.route-step-card a{color:#edcf79;font-weight:800;text-decoration:none}
+.poi-legend{display:flex;flex-wrap:wrap;gap:7px 11px;margin:12px 0;padding:9px 0;border-top:1px solid #52432b;border-bottom:1px solid #52432b;color:#bdb49d;font-size:9px}
+.poi-legend span{display:flex;align-items:center;gap:5px}.poi-dot{width:10px;height:10px;border-radius:50%;display:inline-block;border:1px solid #fff6}.poi-dot.trainer{background:#65c8cf}.poi-dot.vendor{background:#e5b548}.poi-dot.farm{background:#78d65e}.poi-dot.quest{background:#a994e5}
+.poi-list-head{display:flex;justify-content:space-between;align-items:center;margin:9px 0;color:#e9cf82;font-size:9px;letter-spacing:.8px}.poi-list-head small{color:#9c9279}
+.poi-list,.route-stops{display:grid;gap:6px;max-height:215px;overflow:auto;padding-right:3px}
+.poi-row,.route-stop{display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:8px;text-align:left;width:100%;padding:7px;border:1px solid #4f422a;border-radius:4px;background:linear-gradient(100deg,#211d15,#141713);color:#ded5bf;cursor:pointer}
+.poi-row:hover,.poi-row.active,.route-stop:hover{border-color:#8ecb63;background:linear-gradient(100deg,#292419,#172318);box-shadow:0 0 10px #76d14b22}
+.poi-icon{display:grid;place-items:center;border:1px solid currentColor;border-radius:50%;font:800 10px Georgia,serif;color:#fff;width:25px;height:25px;background:#171713;box-shadow:0 0 9px currentColor}
+.poi-icon.trainer{color:#65c8cf}.poi-icon.vendor{color:#e5b548}.poi-icon.farm{color:#78d65e}.poi-icon.quest{color:#a994e5}
+.poi-row strong,.route-stop strong{display:block;font:700 11px Georgia,serif;color:#f1d887}.poi-row small,.route-stop small{display:block;margin-top:2px;color:#a9a18d;font-size:8px;line-height:1.35}
+.poi-row em,.route-stop em{font-style:normal;color:#b6a777;font-size:8px;white-space:nowrap}
+.poi-inspect{min-height:54px;margin-top:9px;padding:9px 10px;border-left:2px solid #75d05c;background:#0d120e;color:#c9c0aa;font-size:9px;line-height:1.5}
+.poi-inspect strong{color:#f3df9b}.poi-inspect .source-note{display:block;margin-top:5px;color:#9eae9a;font-size:8px}
+.route-stop-heading{margin-top:14px}
+.route-stop{grid-template-columns:1fr auto}.route-stop button{border:1px solid #88703e;border-radius:3px;background:#151711;color:#e8cf80;padding:5px 7px;font:800 8px "Segoe UI",system-ui,sans-serif;cursor:pointer}.route-stop button:hover{border-color:#8fe077;color:white}
 #stage.detail-open #map,#stage.detail-open>.mapnote{display:none}
-@media(max-width:980px){.zone-detail-grid{grid-template-columns:1fr}.poi-list{max-height:200px}}
-@media(max-width:650px){body:after{inset:3px}.zone-explorer{padding:8px}.zone-toolbar{flex-wrap:wrap}.zone-heading{min-width:42%}.detail-filter{margin-left:auto}.detail-map-foot{flex-direction:column}.detail-map-label{font-size:13px}.poi-list{max-height:240px}}
-</style></head><body><div class="shell"><aside class="side"><div class="brand"><div class="crest"><svg viewBox="0 0 50 58" aria-label="Felfire crest"><path d="M25 2 46 10 42 39 25 55 8 39 4 10Z" fill="#192c32" stroke="#e8c777" stroke-width="2"/><path d="M25 43c-9-8-9-15-2-25 0 7 4 8 4 13 5-5 7-10 5-16 9 12 8 21-7 28Z" fill="#75d9a6"/><path d="M25 40c-4-4-3-8 1-12 0 4 4 6-1 12Z" fill="#f2cf79"/></svg></div><div><b>FELFIRE ATLAS</b><small>WARLOCK FIELD CODEX</small></div></div><div class="navcap">FIELD OPERATIONS</div><nav class="nav" id="nav"><button class="on" data-p="map"><span class="ico">⌖</span>Field Map</button><button data-p="level"><span class="ico">➤</span>Leveling</button><button data-p="quests"><span class="ico">✦</span>Quest Log</button><button data-p="dungeons"><span class="ico">⚔</span>Dungeons</button><button data-p="raids"><span class="ico">♜</span>Raids</button><button data-p="talent"><span class="ico">✧</span>Talent Build</button><button data-p="tailor"><span class="ico">♢</span>Tailoring</button><button data-p="enchant"><span class="ico">◇</span>Enchanting</button><button data-p="cook"><span class="ico">♨</span>Cooking</button><button data-p="aid"><span class="ico">✚</span>First Aid</button><button data-p="kits"><span class="ico">▤</span>Material Kits</button><button data-p="excel"><span class="ico">▣</span>Excel Preview</button></nav><div class="foot"><b>ALLIANCE ✦ GNOME / HUMAN</b><br>WoW Forever • Level 60 Era</div></aside><main>
+@media(max-width:1150px){.zone-toolbar{flex-wrap:wrap}.map-controls{justify-content:flex-start;width:100%}.zone-detail-grid{grid-template-columns:minmax(0,1.4fr) minmax(290px,.9fr)}}
+@media(max-width:900px){.zone-detail-grid{grid-template-columns:1fr}.map-viewport{height:clamp(390px,68vh,720px)}.poi-list,.route-stops{max-height:230px}}
+@media(max-width:650px){body:after{inset:3px}.zone-explorer{padding:8px}.zone-toolbar{gap:9px}.zone-heading{min-width:45%}.map-controls{display:grid;grid-template-columns:1fr 1fr}.map-controls label,.map-controls select{width:100%;max-width:none}.map-viewport{height:65vh;min-height:360px}.detail-map-foot{flex-direction:column}.map-zoom{right:6px;top:6px}.poi-list,.route-stops{max-height:250px}}</style></head><body><div class="shell"><aside class="side"><div class="brand"><div class="crest"><svg viewBox="0 0 50 58" aria-label="Felfire crest"><path d="M25 2 46 10 42 39 25 55 8 39 4 10Z" fill="#192c32" stroke="#e8c777" stroke-width="2"/><path d="M25 43c-9-8-9-15-2-25 0 7 4 8 4 13 5-5 7-10 5-16 9 12 8 21-7 28Z" fill="#75d9a6"/><path d="M25 40c-4-4-3-8 1-12 0 4 4 6-1 12Z" fill="#f2cf79"/></svg></div><div><b>FELFIRE ATLAS</b><small>WARLOCK FIELD CODEX</small></div></div><div class="navcap">FIELD OPERATIONS</div><nav class="nav" id="nav"><button class="on" data-p="map"><span class="ico">⌖</span>Field Map</button><button data-p="level"><span class="ico">➤</span>Leveling</button><button data-p="quests"><span class="ico">✦</span>Quest Log</button><button data-p="dungeons"><span class="ico">⚔</span>Dungeons</button><button data-p="raids"><span class="ico">♜</span>Raids</button><button data-p="talent"><span class="ico">✧</span>Talent Build</button><button data-p="tailor"><span class="ico">♢</span>Tailoring</button><button data-p="enchant"><span class="ico">◇</span>Enchanting</button><button data-p="cook"><span class="ico">♨</span>Cooking</button><button data-p="aid"><span class="ico">✚</span>First Aid</button><button data-p="kits"><span class="ico">▤</span>Material Kits</button><button data-p="excel"><span class="ico">▣</span>Excel Preview</button></nav><div class="foot"><b>ALLIANCE ✦ GNOME / HUMAN</b><br>WoW Forever • Level 60 Era</div></aside><main>
 <div class="top"><span>AZEROTH FIELD CODEX / ALLIANCE DESTRUCTION WARLOCK</span><a href="https://onedrive.live.com/personal/b561a352f4f785dc/_layouts/15/doc.aspx?resid=8434ea4c-9b84-4d1d-a372-5846492ac87e&amp;cid=b561a352f4f785dc" target="_blank" rel="noopener">↗ EXCEL FIELD GUIDE</a></div>
 <section class="page show" id="p-map"><div class="hero"><div><div class="over">WORLD OF WARCRAFT: FOREVER • AZEROTH CARTOGRAPHY</div><h1>Field Atlas</h1><p>One map for leveling, profession farms, trainer stops, and warlock checkpoints. Choose a layer and level band, then click any zone for its field dossier.</p></div><div class="stamp">GNOME / HUMAN ROUTES • LEVEL 1–60</div></div><div class="stats"><div class="stat"><b>1–60</b><span>Alliance campaign</span></div><div class="stat"><b>4</b><span>Professions to 300</span></div><div class="stat"><b>51</b><span>Talent points</span></div><div class="stat"><b>1 map</b><span>Zones + farm camps</span></div></div>
 <div class="card"><div class="head"><h2>Interactive Azeroth Operations Map</h2><div class="tools"><label>Layer <select id="layer"><option>Leveling</option><option>Tailoring</option><option>Enchanting</option><option>Cooking</option><option>First Aid</option><option>Warlock</option><option>Quests</option><option>Dungeons</option><option>Raids</option><option>All Layers</option></select></label><label>Level <select id="bracket"><option>Any Level</option><option>1–10</option><option>10–20</option><option>20–30</option><option>30–40</option><option>40–50</option><option>50–60</option></select></label><label>Race <select id="race"><option>Gnome</option><option>Human</option></select></label><label>Zone <select id="zonePick"></select></label></div></div>
-<div class="body mapgrid"><div><div class="stage" id="stage"><svg id="map" viewBox="0 0 1120 620" aria-label="Clickable Alliance Azeroth zone map"><defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#b7d3cd" stroke-opacity=".06"/></pattern><filter id="g"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="1120" height="620" fill="#0b1b23"/><rect width="1120" height="620" fill="url(#grid)"/><path class="land" d="M180 35L323 42 416 92 438 163 403 224 431 285 380 357 400 426 353 488 310 541 256 601 191 613 145 565 132 488 87 427 104 344 72 276 103 203 97 127 138 79Z"/><path class="land" d="M698 40L811 46 854 84 903 70 966 101 1016 165 1002 226 1041 286 1021 343 1057 397 1032 448 998 505 949 552 899 608 839 616 787 583 742 539 687 516 648 468 631 404 644 340 614 279 639 224 627 160 658 105Z"/><text class="maplabel" x="258" y="20">EASTERN KINGDOMS</text><text class="maplabel" x="840" y="20">KALIMDOR</text><text x="1038" y="38" fill="#b3bce4" font-size="8" letter-spacing="2" text-anchor="middle">SKYWALL INSET</text><g id="nodes"></g><text x="25" y="595" fill="#789096" font-size="9" letter-spacing="2">NORTH</text><path d="M40 582l7-17 7 17" fill="none" stroke="#d7b66e" stroke-width="1.5"/></svg><div class="mapnote">ZONE BOARD • CLICK A REGION TO OPEN ITS FIELD MAP</div><section class="zone-explorer" id="zoneExplorer" hidden aria-label="Zone detail map">
+<div class="body mapgrid"><div><div class="stage" id="stage"><svg id="map" viewBox="0 0 1120 620" aria-label="Clickable Alliance Azeroth zone map"><defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#b7d3cd" stroke-opacity=".06"/></pattern><filter id="g"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="1120" height="620" fill="#0b1b23"/><rect width="1120" height="620" fill="url(#grid)"/><path class="land" d="M180 35L323 42 416 92 438 163 403 224 431 285 380 357 400 426 353 488 310 541 256 601 191 613 145 565 132 488 87 427 104 344 72 276 103 203 97 127 138 79Z"/><path class="land" d="M698 40L811 46 854 84 903 70 966 101 1016 165 1002 226 1041 286 1021 343 1057 397 1032 448 998 505 949 552 899 608 839 616 787 583 742 539 687 516 648 468 631 404 644 340 614 279 639 224 627 160 658 105Z"/><text class="maplabel" x="258" y="20">EASTERN KINGDOMS</text><text class="maplabel" x="840" y="20">KALIMDOR</text><text x="1038" y="38" fill="#b3bce4" font-size="8" letter-spacing="2" text-anchor="middle">SKYWALL INSET</text><g id="nodes"></g><text x="25" y="595" fill="#789096" font-size="9" letter-spacing="2">NORTH</text><path d="M40 582l7-17 7 17" fill="none" stroke="#d7b66e" stroke-width="1.5"/></svg><div class="mapnote">ZONE BOARD • CLICK A REGION TO OPEN ITS FIELD MAP</div><section class="zone-explorer" id="zoneExplorer" hidden aria-label="Interactive high-resolution zone map">
 <div class="zone-toolbar">
 <button class="world-return" id="worldReturn" type="button">◂ AZEROTH OVERVIEW</button>
-<div class="zone-heading"><span>REGIONAL FIELD MAP</span><strong id="detailTitle">Zone Detail</strong></div>
-<label class="detail-filter">SHOW <select id="detailFilter" aria-label="Filter zone points"><option>All Points</option><option>Tailoring</option><option>Enchanting</option><option>Cooking</option><option>First Aid</option><option>Quests</option><option>Dungeons</option><option>Raids</option></select></label>
-</div>
+<div class="zone-heading"><span>LIVE ZONE MAP • EXACT ROUTE POINTS</span><strong id="detailTitle">Zone Detail</strong></div>
+<div class="map-controls">
+<label>MAP <select id="detailArea" aria-label="Choose a zone map"></select></label>
+<label>GUIDE <select id="mapGuide" aria-label="Choose a route guide"><option>All Stops</option><option>Leveling Route</option><option>Warlock Talents</option><option>Tailoring</option><option>Enchanting</option><option>Cooking</option><option>First Aid</option></select></label>
+<label>STEP <select id="mapStep" aria-label="Choose a guide step"></select></label>
+<label>PINS <select id="detailFilter" aria-label="Filter map pins"><option>All Marker Types</option><option>Trainers</option><option>Recipe Vendors</option><option>Farming Stops</option><option>Quest NPCs</option></select></label>
+</div></div>
 <div class="zone-detail-grid">
 <div class="detail-map-shell">
-<svg id="zoneDetailMap" viewBox="0 0 900 520" role="img" aria-label="Interactive zone field map with trainer and farming pins">
-<defs>
-<pattern id="detailGrid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#c9b673" stroke-opacity=".075"/></pattern>
-<linearGradient id="detailGround" x2="0" y2="1"><stop stop-color="#334239"/><stop offset="1" stop-color="#18241d"/></linearGradient>
-<filter id="poiGlow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
-<rect width="900" height="520" fill="#111611"/><path class="detail-land" d="M36 65 118 32 215 48 283 23 386 50 479 30 560 51 660 34 755 66 843 125 865 208 839 286 863 368 814 435 716 481 607 469 520 496 417 468 326 490 238 460 154 474 74 418 42 337 55 260 30 174Z"/>
-<path class="detail-coast" d="M36 65 118 32 215 48 283 23 386 50 479 30 560 51 660 34 755 66 843 125 865 208 839 286 863 368 814 435 716 481 607 469 520 496 417 468 326 490 238 460 154 474 74 418 42 337 55 260 30 174Z"/>
-<rect width="900" height="520" fill="url(#detailGrid)"/>
-<g class="detail-contours"><path d="M95 145c90-94 233-76 331-42s218 15 331 57M71 197c115-74 201-66 310-20s234 29 422-5M67 260c139-80 245-41 353-7s244 40 413-24M80 326c125-61 222-10 321 12s243 18 424-50M114 385c96-47 207 1 307 29s219-2 369-65M177 429c111-37 189 29 290 34s196-31 291-61" fill="none"/><path d="M194 91c-39 85 59 110 26 180s14 97 89 118M395 67c-46 64 30 121 3 187s3 99 77 146M650 78c-31 82 39 117-7 183s-3 112 68 151" fill="none"/></g>
-<path class="detail-river" d="M170 80c32 66 95 57 104 120s-45 90-4 152 95 61 112 122M706 77c-43 55-18 105-73 146s-42 83 5 121 29 70-9 106"/>
-<path class="detail-road" d="M120 390c96-54 166-138 259-137s170 72 256 28 91-96 150-118M214 71c44 69 130 88 166 166s56 151 119 212"/>
-<text class="detail-map-label" x="44" y="36">NORTH ↑</text><text class="detail-map-label" x="852" y="497" text-anchor="end">FIELD NOTES • SCHEMATIC PIN PLACEMENT</text>
-<g id="detailPoiLayer"></g></svg>
-<div class="detail-map-foot"><span id="detailCoordinates">Alliance field atlas</span><span>PIN PLACEMENT IS SCHEMATIC • USE THE NAMED LANDMARK / COORDINATE IN EACH NOTE</span></div>
+<div class="map-viewport" id="mapViewport" aria-label="Drag to pan, use the wheel to zoom">
+<div class="map-canvas" id="gameMapCanvas">
+<img id="zoneMapArt" alt="High-resolution in-game map artwork for the selected World of Warcraft zone" draggable="false">
+<div class="detail-pin-layer" id="detailPoiLayer"></div>
+</div>
+<div class="map-zoom" aria-label="Map zoom controls"><button id="zoomIn" type="button" aria-label="Zoom in">＋</button><button id="zoomOut" type="button" aria-label="Zoom out">−</button><button id="zoomReset" type="button">RESET</button><button id="mapFullscreen" type="button">⛶</button></div>
+<div class="map-load-error" id="mapLoadError" hidden><strong>Map artwork did not load.</strong><span>Open the source map page to use its built-in pan and zoom.</span><a id="mapFallbackLink" target="_blank" rel="noopener">Open Forever map ↗</a></div>
+</div>
+<div class="detail-map-foot"><span id="detailCoordinates">Map coordinates use the in-game 0–100 grid · X west→east · Y north→south</span><span><a id="mapSourceLink" target="_blank" rel="noopener">FOREVER MAP DATA ↗</a> · MAP ART © BLIZZARD ENTERTAINMENT</span></div>
 </div>
 <aside class="zone-poi-panel">
-<div class="poi-summary"><span id="detailBand"></span><h3 id="detailSummaryTitle"></h3><p id="detailSummaryText"></p></div>
-<div class="poi-legend"><span><i class="poi-dot trainer"></i>T Trainer</span><span><i class="poi-dot vendor"></i>V Recipe / Vendor</span><span><i class="poi-dot farm"></i>F Farm</span><span><i class="poi-dot quest"></i>Q Quest</span><span><i class="poi-dot dungeon"></i>D Dungeon</span><span><i class="poi-dot raid"></i>R Raid</span></div>
-<div class="poi-list-head"><b>LOCAL POINTS</b><small id="poiCount"></small></div>
+<div class="poi-summary"><span id="detailBand"></span><h3 id="detailSummaryTitle"></h3><p id="detailSummaryText">Select a guide and step to see where to train, gather, or continue questing.</p></div>
+<div class="route-step-card" id="routeStepCard"><strong>ROUTE INTEL</strong><p>Choose a guide above. Exact stops will be linked to the selected skill or character-level step.</p></div>
+<div class="poi-legend"><span><i class="poi-dot trainer"></i>Trainer</span><span><i class="poi-dot vendor"></i>Recipe / book vendor</span><span><i class="poi-dot farm"></i>Material farm</span><span><i class="poi-dot quest"></i>Quest NPC</span></div>
+<div class="poi-list-head"><b>VISIBLE ON THIS MAP</b><small id="poiCount"></small></div>
 <div class="poi-list" id="poiList"></div>
-<div class="poi-inspect" id="poiInspect">Select a map pin or field note to inspect its location.</div>
+<div class="poi-inspect" id="poiInspect">Select a marker to see the exact coordinates, route timing, and source.</div>
+<div class="poi-list-head route-stop-heading"><b>OTHER STOPS FOR THIS STEP</b><small id="routeStopCount"></small></div>
+<div class="route-stops" id="routeStops"></div>
 </aside></div></section></div><div class="legend"><span><i class="sw" style="background:#56a9d1"></i>Leveling</span><span><i class="sw" style="background:#bd8a48"></i>Tailoring / cloth</span><span><i class="sw" style="background:#a17bd9"></i>Enchanting</span><span><i class="sw" style="background:#55c2a0"></i>Cooking</span><span><i class="sw" style="background:#ee8065"></i>First Aid</span><span><i class="sw" style="background:#7c83c6"></i>Quests</span><span><i class="sw" style="background:#d9873f"></i>Dungeons / raids</span></div></div><aside class="card dossier"><div class="head"><h3>Zone Dossier</h3><small id="active">LAYER</small></div><div class="body"><div class="level" id="zl"></div><h3 id="zn"></h3><div class="badges" id="zb"></div><div class="tip" id="zt"></div><div class="farm" id="zf"></div><a class="link" href="https://wow-forever.gg/atlas/" target="_blank" rel="noopener">OPEN FULL FOREVER ATLAS ↗</a></div></aside></div></div>
 <div class="split"><div class="card"><div class="head"><h3>Alliance Campaign</h3><small>MOVE WHEN QUESTS GO GRAY</small></div><div class="body routecards" id="snap"></div></div><div class="card"><div class="head"><h3>Destruction Field Rules</h3><small>SOLO RHYTHM</small></div><div class="body"><div class="call"><strong>Stats:</strong> Spell Power → Intellect + Spirit → Stamina. Take Hit/Crit when useful gear offers them.</div><div class="call"><strong>Mana:</strong> Life Tap scales with Spirit in Forever. Bandage out of combat after tapping.</div><div class="call"><strong>Combo:</strong> Immolate before Conflagrate. Shadowburn at 25, Conflagrate at 26.</div></div></div></div><div class="source"><a href="https://wow-forever.gg/atlas/" target="_blank">Forever Atlas</a><a href="https://foreverspec.com/classes/warlock/destruction/?v=leveling" target="_blank">ForeverSpec talent route</a><a href="https://www.wow-professions.com/forever/tailoring-leveling-guide" target="_blank">Forever Tailoring route</a><a href="https://kovarel.com/wow-forever/professions/enchanting/leveling" target="_blank">Enchanting route</a></div></section>
 <section class="page" id="p-level"><div class="hero"><div><div class="over">Alliance route • Gnome and Human starts</div><h1>Leveling Campaign</h1><p>Choose one or two nearby zones per bracket. Collect flight paths and move on when quests turn gray.</p></div><div class="stamp">CLASSIC WORLD + FOREVER ZONES</div></div><div class="card"><div class="head"><h2>Campaign Route • 1–60</h2><small>CLICK A BRACKET TO PLOT IT</small></div><div class="body tablebox"><table><thead><tr><th>Level</th><th>Alliance zones</th><th>Optional dungeons</th><th>Destro field note</th><th>Travel cue</th></tr></thead><tbody id="levels"></tbody></table></div></div><div class="call"><strong>Gnome:</strong> Dun Morogh → Loch Modan. <strong>Human:</strong> Elwynn → Westfall. Both Alliance starts stay in the guide.</div></section>
@@ -202,7 +218,7 @@ button:hover{box-shadow:0 0 13px #73d95a25}
 </tbody></table></div></div>
 <div class="split"><div class="card"><div class="head"><h3>Destruction Warlock Prep</h3><small>BEFORE YOUR FIRST RAID</small></div><div class="body"><div class="call"><strong>Gear:</strong> finish dungeon/quest/crafted pre-raid slots; level-60 Destruction gear is currently tracked by slot with sources and alternatives.</div><div class="call"><strong>Stats:</strong> keep Spell Power high, add Hit for the target’s level, then Crit/Intellect/Spirit as your gear offers. Hit required changes with target level; talent hit counts.</div><div class="call"><strong>Onyxia:</strong> start the Alliance attunement chain early; do not leave it to raid night.</div><a class="link" href="https://wowhandbook.com/bis/warlock/destruction/" target="_blank" rel="noopener">LEVEL 60 DESTRO PRE-RAID SLOT LIST ↗</a><a class="link" href="https://worldofwarcraft.blizzard.com/en-us/news/24303009" target="_blank" rel="noopener">OFFICIAL RAID SIZES, LOCATIONS & ATTUNEMENT ↗</a></div></div>
 <div class="card"><div class="head"><h3>Loot Radar</h3><small>AVOID PREMATURE BIS CLAIMS</small></div><div class="body"><div class="call"><strong>Confirmed now:</strong> raid names, locations, raid sizes, and opening date.</div><div class="call"><strong>Pending live verification:</strong> item-by-item Forever raid loot and Warlock ranking. Raid drops fill into external item databases as each raid becomes available.</div><a class="link" href="https://playfulls.com/database" target="_blank" rel="noopener">CHECK FOREVER ITEM DATABASE ↗</a><a class="link" href="https://wowfah.com/dungeons" target="_blank" rel="noopener">CHECK RECORDED DUNGEON / RAID DROPS ↗</a></div></div></div>
-<div class="source"><a href="https://worldofwarcraft.blizzard.com/en-us/news/24303009" target="_blank" rel="noopener">Blizzard: Forever Raid Overview</a><a href="https://worldofwarcraft.blizzard.com/en-us/news/24315643/return-to-azeroth-in-world-of-warcraft-forever" target="_blank" rel="noopener">Blizzard: new Forever areas & content</a></div></section><section class="page" id="p-excel"><div class="hero"><div><div class="over">Live OneDrive companion • read-only preview</div><h1>Excel Field Guide</h1><p>Your field sheets in one place: leveling route, talent roadmap, profession guides, shopping kits, and Farm Atlas. The preview syncs from your OneDrive workbook.</p></div><div class="stamp">LIVE WORKBOOK • VIEW MODE</div></div><div class="card"><div class="head"><h2>Workbook Preview</h2><a class="source" href="https://onedrive.live.com/personal/b561a352f4f785dc/_layouts/15/doc.aspx?resid=8434ea4c-9b84-4d1d-a372-5846492ac87e&cid=b561a352f4f785dc" target="_blank" rel="noopener">↗ Open in Excel Online</a></div><div class="body"><div class="workbook-note"><span><strong>READ-ONLY EMBED</strong> &nbsp; For full Excel editing, open the workbook in Excel Online.</span><span class="badge active">SYNCED FROM ONEDRIVE</span></div><div class="workbook-frame"><iframe title="Felfire Atlas Excel Field Guide" src="https://1drv.ms/x/c/b561a352f4f785dc/IQRM6jSEhJsdTaNyWEZJKsh-AZQMDb0VpjFhMxT8Y_bMLGc" loading="lazy" allowfullscreen></iframe></div></div></div><div class="call" style="margin-top:12px"><strong>Sharing:</strong> The embedded view is public and read-only. Editing remains available through the Excel Online button for accounts with workbook access.</div></section><div class="footer">FELFIRE ATLAS • Personal field reference for WoW Forever • Alliance routes only. This is a stylized route map; open the full Forever Atlas for exact zone outlines and points of interest.</div></main></div>
+<div class="source"><a href="https://worldofwarcraft.blizzard.com/en-us/news/24303009" target="_blank" rel="noopener">Blizzard: Forever Raid Overview</a><a href="https://worldofwarcraft.blizzard.com/en-us/news/24315643/return-to-azeroth-in-world-of-warcraft-forever" target="_blank" rel="noopener">Blizzard: new Forever areas & content</a></div></section><section class="page" id="p-excel"><div class="hero"><div><div class="over">Live OneDrive companion • read-only preview</div><h1>Excel Field Guide</h1><p>Your field sheets in one place: leveling route, talent roadmap, profession guides, shopping kits, and Farm Atlas. The preview syncs from your OneDrive workbook.</p></div><div class="stamp">LIVE WORKBOOK • VIEW MODE</div></div><div class="card"><div class="head"><h2>Workbook Preview</h2><a class="source" href="https://onedrive.live.com/personal/b561a352f4f785dc/_layouts/15/doc.aspx?resid=8434ea4c-9b84-4d1d-a372-5846492ac87e&cid=b561a352f4f785dc" target="_blank" rel="noopener">↗ Open in Excel Online</a></div><div class="body"><div class="workbook-note"><span><strong>READ-ONLY EMBED</strong> &nbsp; For full Excel editing, open the workbook in Excel Online.</span><span class="badge active">SYNCED FROM ONEDRIVE</span></div><div class="workbook-frame"><iframe title="Felfire Atlas Excel Field Guide" src="https://1drv.ms/x/c/b561a352f4f785dc/IQRM6jSEhJsdTaNyWEZJKsh-AZQMDb0VpjFhMxT8Y_bMLGc" loading="lazy" allowfullscreen></iframe></div></div></div><div class="call" style="margin-top:12px"><strong>Sharing:</strong> The embedded view is public and read-only. Editing remains available through the Excel Online button for accounts with workbook access.</div></section><div class="footer">FELFIRE ATLAS • Personal field reference for WoW Forever • Alliance routes only. Zone artwork comes from the Forever atlas. Curated pins use published map coordinates; camp-area markers and community-reported positions are labeled in their notes.</div></main></div>
 <script>
 const zones=[
 ['dun','Dun Morogh','EK','1–10',280,294,116,['Leveling','Tailoring','Enchanting','Cooking','First Aid','Warlock'],'Gnome start; Ironforge is close for profession trainers.','Helm’s Bed Lake: Raw Brilliant Smallfish.'],
@@ -288,74 +304,379 @@ document.getElementById('farms').innerHTML=farms.map(f=>'<tr><td>'+f[0]+'</td><t
 document.getElementById('farms').onclick=e=>{const b=e.target.closest('[data-zone]');if(!b)return;const f=farms.find(x=>x[4]===b.dataset.zone);plotZone(b.dataset.zone,f?.[5]||'All Layers')};
 document.getElementById('layer').onchange=()=>{drawMap();if(!document.getElementById('zoneExplorer').hidden)renderZoneDetail(chosen)};document.getElementById('bracket').onchange=()=>{drawMap();if(!document.getElementById('zoneExplorer').hidden)renderZoneDetail(chosen)};
 
-// Profession trainers, recipe sellers, farm routes and local sites for the zone detail maps.
-const trainerStops={
-dun:[{kind:'trainer',name:'Thamner Pol',place:'Kharanos • First Aid',skills:['First Aid'],detail:'Alliance First Aid trainer for the opening bandage steps.'},{kind:'trainer',name:'Gremlock Pilsnor',place:'Thunderbrew Distillery, Kharanos • Cooking',skills:['Cooking'],detail:'Local Cooking trainer. Gretta Ganter sells the starter fish recipe in Kharanos.'},{kind:'vendor',name:'Nearby Ironforge profession hub',place:'Great Forge • Tailoring / Enchanting',skills:['Tailoring','Enchanting'],detail:'Uthrar Threx and Jormund Stonebrow train Tailoring; Thonys Pillarstone and Gimble Thistlefuzz train Enchanting. The map pin denotes the nearby city route; use these exact NPC names in Ironforge.'}],
-elw:[{kind:'trainer',name:'Kitta Firewind',place:'Tower of Azora • Enchanting',skills:['Enchanting'],detail:'Alliance Enchanting trainer in Elwynn Forest.'},{kind:'vendor',name:'Nearby Stormwind profession hub',place:'Stormwind City • Mage Quarter / Trade District',skills:['Tailoring','Enchanting','Cooking','First Aid'],detail:'City route for Georgio Bolero (Tailoring), Lucan Cordell (Enchanting), Catherine Leland (Cooking recipes), and Shaina Fuller (First Aid). This pin marks the Stormwind travel stop, not an exact in-zone NPC coordinate.'}],
-west:[{kind:'vendor',name:'Kriggon Talsone',place:'Sentinel Hill • Cooking recipes',skills:['Cooking'],detail:'Recipe vendor for the coastal fish option. Confirm the exact recipe name in the Cooking route before traveling.'}],
-loch:[{kind:'vendor',name:'Khara Deepwater',place:'Thelsamar • Cooking recipes',skills:['Cooking'],detail:'Recipe vendor for Longjaw Mud Snapper; farm or buy the matching fish.'}],
-wet:[{kind:'vendor',name:'Stuart Fleming',place:'Menethil Harbor • Cooking recipes',skills:['Cooking'],detail:'Recipe vendor for Mithril Head Trout; the route also lists other Alliance vendors.'}],
-hill:[{kind:'vendor',name:'Syndicate / Durnholde cloth camps',place:'Durnholde Keep and nearby camps',skills:['Tailoring','First Aid'],detail:'Useful Wool Cloth and bandage-cloth farming area; loot humanoids while questing.'}],
-ara:[{kind:'vendor',name:'Deneb Walker',place:'Stromgarde Keep • First Aid books / manuals',skills:['First Aid'],detail:'Buy Expert First Aid – Under Wraps and the Heavy Silk / Mageweave manuals before their brackets.'},{kind:'vendor',name:'Hammon Karwn',place:'Refuge Pointe • Cooking recipe',skills:['Cooking'],detail:'Recipe vendor for Roast Raptor; collect raptor flesh and Hot Spices if using this route.'}],
-ash:[{kind:'vendor',name:'Shandrina',place:'Mystral Lake • Expert Cooking Cookbook',skills:['Cooking'],detail:'Buy the Expert Cookbook before advancing beyond the Expert Cooking cap.'}],
-dust:[{kind:'trainer',name:'Timothy Worthington',place:'Theramore Isle • Tailoring',skills:['Tailoring'],detail:'Alliance Tailoring trainer for later profession ranks and recipes.'},{kind:'trainer',name:'Doctor Gustaf VanHowzen',place:'Theramore keep • First Aid',skills:['First Aid'],detail:'Complete Triage at 225 skill and level 35 to unlock the late First Aid cap; he sells the upper bandage recipes.'},{kind:'vendor',name:'Helenia Olden',place:'Theramore Isle • Cooking recipes',skills:['Cooking'],detail:'Alliance recipe vendor for the Roast Raptor alternative.'}],
-bad:[{kind:'trainer',name:'Annora',place:'Inside Uldaman • Enchanting',skills:['Enchanting'],detail:'Artisan Enchanting trainer. Plan the Uldaman trip and learn the skill ranks and available recipes before leaving.'}],
-winter:[{kind:'vendor',name:'Qia',place:'Everlook • Tailoring patterns',skills:['Tailoring'],detail:'Everlook pattern vendor; check the Tailoring route for the Runecloth Gloves recipe before farming.'}],
-hyjal:[{kind:'vendor',name:'Pexmit Elderwild',place:'Elderwild • Tailoring pattern',skills:['Tailoring'],detail:'Sells the Bind-on-Pickup Runecloth Cuffs pattern listed in the route.'}],
-sili:[{kind:'vendor',name:'Kania',place:'Cenarion Hold inn • Enchanting oils',skills:['Enchanting'],detail:'Enchanter formula vendor for the late oil recipes listed in the route.'}],
-tana:[{kind:'vendor',name:'Dirge Quikcleave',place:'Gadgetzan • Artisan Cooking quest',skills:['Cooking'],detail:'Start Clamlette Surprise at 225 Cooking and level 35; bring the quest ingredients.'},{kind:'vendor',name:'Gikkix',place:'Steamwheedle Port • Cooking recipes',skills:['Cooking'],detail:'Sells the Yellowtail and Nightfin recipes used in late Cooking brackets.'}],
-stv:[{kind:'vendor',name:'Kelsey Yance',place:'Booty Bay • Cooking recipe',skills:['Cooking'],detail:'Recipe vendor for the Redgill alternative.'}],
-moon:[{kind:'vendor',name:'Lorelae Wintersong',place:'Nighthaven • Enchanting formulas',skills:['Enchanting'],detail:'Formula vendor in Moonglade; check the Enchanting route for the formula you need.'}],
-teld:[{kind:'vendor',name:'Darnassus profession hub',place:'Craftsmen’s Terrace • Enchanting',skills:['Enchanting'],detail:'Mythrin’dir is listed for the Greater Stamina shield formula. Travel to Darnassus; this pin marks the nearby hub.'}]
+// High-resolution zone maps, route selectors, and coordinate-true route pins.
+const detailMaps={
+dun:{id:1,title:'Dun Morogh',slug:'dun-morogh'},elw:{id:12,title:'Elwynn Forest',slug:'elwynn-forest'},west:{id:40,title:'Westfall',slug:'westfall'},loch:{id:38,title:'Loch Modan',slug:'loch-modan'},red:{id:44,title:'Redridge Mountains',slug:'redridge-mountains'},dusk:{id:10,title:'Duskwood',slug:'duskwood'},wet:{id:11,title:'Wetlands',slug:'wetlands'},hill:{id:267,title:'Hillsbrad Foothills',slug:'hillsbrad-foothills'},ara:{id:45,title:'Arathi Highlands',slug:'arathi-highlands'},hind:{id:47,title:'The Hinterlands',slug:'the-hinterlands'},sear:{id:51,title:'Searing Gorge',slug:'searing-gorge'},bad:{id:3,title:'Badlands',slug:'badlands'},burn:{id:46,title:'Burning Steppes',slug:'burning-steppes'},river:{id:16591,title:'Riverglades',slug:'riverglades'},stv:{id:33,title:'Stranglethorn Vale',slug:'stranglethorn-vale'},swamp:{id:8,title:'Swamp of Sorrows',slug:'swamp-of-sorrows'},blast:{id:4,title:'Blasted Lands',slug:'blasted-lands'},wpl:{id:28,title:'Western Plaguelands',slug:'western-plaguelands'},epl:{id:23,title:'Eastern Plaguelands',slug:'eastern-plaguelands'},tana:{id:440,title:'Tanaris',slug:'tanaris'},fera:{id:357,title:'Feralas',slug:'feralas'},sili:{id:1377,title:'Silithus',slug:'silithus'},fel:{id:361,title:'Felwood',slug:'felwood'},az:{id:16,title:'Azshara',slug:'azshara'},dust:{id:15,title:'Dustwallow Marsh',slug:'dustwallow-marsh'},des:{id:405,title:'Desolace',slug:'desolace'},ash:{id:331,title:'Ashenvale',slug:'ashenvale'},dark:{id:148,title:'Darkshore',slug:'darkshore'},winter:{id:618,title:'Winterspring',slug:'winterspring'},moon:{id:493,title:'Moonglade',slug:'moonglade'},ung:{id:490,title:'Un’Goro Crater',slug:'ungoro-crater'},teld:{id:141,title:'Teldrassil',slug:'teldrassil'},hyjal:{id:616,title:'Mount Hyjal',slug:'mount-hyjal'},shend:{id:16651,title:'Shen’dralas',slug:'shendralas'},zeph:{id:16593,title:'Zephras Isle',slug:'zephras-isle'},tir:{id:85,title:'Tirisfal Glades',slug:'tirisfal-glades'},alter:{id:36,title:'Alterac Mountains',slug:'alterac-mountains'},storm:{id:1519,title:'Stormwind City',slug:'stormwind-city'},iron:{id:1537,title:'Ironforge',slug:'ironforge'},darn:{id:1657,title:'Darnassus',slug:'darnassus'}
 };
-const localSites={
-bad:[{kind:'dungeon',name:'Uldaman',place:'Badlands • Dungeon',skills:['Dungeons','Enchanting'],detail:'Annora’s Artisan Enchanting stop is inside. Combine the dungeon run with the trainer visit.'}],
-burn:[{kind:'dungeon',name:'Blackrock Spire',place:'Blackrock Mountain • Dungeon',skills:['Dungeons','Tailoring'],detail:'Late-game dungeon route and a listed source of Ironweb Spider Silk.'}],
-dust:[{kind:'raid',name:'Onyxia’s Lair',place:'Dustwallow Marsh • Raid',skills:['Raids'],detail:'Raid entrance and Theramore profession stops are both in the zone region.'}],
-hyjal:[{kind:'dungeon',name:'The Barrow Deeps',place:'Mount Hyjal • Dungeon',skills:['Dungeons','Tailoring'],detail:'Local Forever instance; the zone dossier also marks the Pexmit pattern stop.'},{kind:'raid',name:'Hyjal Summit',place:'Mount Hyjal • Raid',skills:['Raids'],detail:'Local raid route listed in the Field Guide.'}]
-};
-const poiMeta={trainer:{icon:'T',color:'#65c8cf'},vendor:{icon:'V',color:'#e5b548'},farm:{icon:'F',color:'#78d65e'},quest:{icon:'Q',color:'#a994e5'},dungeon:{icon:'D',color:'#d88b45'},raid:{icon:'R',color:'#e26850'}};
-let visiblePoints=[];
-function makeZonePoints(id){
- const z=zone(id), out=[];
- (trainerStops[id]||[]).forEach(p=>out.push({...p,layers:p.skills}));
- farms.filter(f=>f[4]===id).forEach((f,i)=>{
-  const coordMatches=[...(z[9]||'').matchAll(/\((\d{1,2}(?:\.\d+)?),\s*(\d{1,2}(?:\.\d+)?)\)/g)];
-  const c=coordMatches[i]||coordMatches[0], xy=c?[Math.min(820,90+Number(c[1])*7.1),Math.min(445,60+Number(c[2])*4)]:null;
-  out.push({kind:'farm',name:f[0]+' • farm route',place:f[2],detail:f[3]+(z[9]?' Zone notes: '+z[9]:''),layers:[f[5]||'Tailoring'],x:xy?.[0],y:xy?.[1],coord:c?'Approx. guide coordinate '+c[0]+' • '+c[1]:''});
- });
- (localSites[id]||[]).forEach(p=>out.push({...p,layers:p.skills}));
- if(!out.some(p=>p.kind==='quest'))out.push({kind:'quest',name:'Alliance quest / travel hub',place:z[1]+' • '+z[3],detail:z[8]+' '+z[9],layers:['Quests']});
- if(!out.length)out.push({kind:'quest',name:'Zone field notes',place:z[1]+' • '+z[3],detail:z[8]+' '+z[9],layers:['Quests']});
- const anchors=[[155,135],[342,113],[534,139],[734,147],[765,280],[660,390],[470,408],[270,363],[130,260],[520,260],[375,260],[700,210]];
- return out.map((p,i)=>({...p,index:i,x:p.x??anchors[i%anchors.length][0],y:p.y??anchors[i%anchors.length][1]}));
+const zoneMapRef={dun:'dun',elw:'elw',west:'west',loch:'loch',red:'red',dusk:'dusk',wet:'wet',hill:'hill',ara:'ara',hind:'hind',sear:'sear',bad:'bad',burn:'burn',river:'river',stv:'stv',swamp:'swamp',blast:'blast',wpl:'wpl',epl:'epl',tana:'tana',fera:'fera',sili:'sili',fel:'fel',az:'az',dust:'dust',des:'des',ash:'ash',dark:'dark',winter:'winter',moon:'moon',ung:'ung',teld:'teld',hyjal:'hyjal',shend:'shend',zeph:'zeph',tir:'tir',alter:'alter',hall:'dun',ruins:'tir',excav:'wet',dalar:'alter',drowned:'stv',kroldok:'river',alcaz:'dust',blackmaw:'az',shaper:'ung',barrow:'hyjal',summit:'hyjal',onyxia:'dust'};
+const mapPage=k=>'https://wow-forever.gg/db/zones/'+detailMaps[k].id+'-'+detailMaps[k].slug+'/';
+const imgUrl=k=>'https://assets.wow-forever.gg/maps/wow_classic_beta/'+detailMaps[k].id+'.png';
+const icyTailor='https://www.icy-veins.com/wow-forever/tailoring-leveling-guide/';
+const icyEnchant='https://www.icy-veins.com/wow-forever/enchanting-leveling-guide/';
+const icyCook='https://www.icy-veins.com/wow-forever/cooking-leveling-guide';
+const icyAid='https://www.icy-veins.com/wow-forever/first-aid/';
+const clothSource='https://bytetavern.com/wow-forever-cloth-farming/';
+const silkSource='https://www.mmojugg.com/news/wow-forever-ironweb-spider-silk-farming.html';
+const detailStops=[];
+function addStop(kind,name,area,x,y,plans,range,materials,place,detail,source,gameMapId,status,extra){
+ detailStops.push({kind,name,area,x,y,plans:Array.isArray(plans)?plans:[plans],range,materials:Array.isArray(materials)?materials:[materials],place,detail,source,gameMapId,status:status||'Verified route coordinate',extra:extra||''});
+}
+function trainer(name,area,x,y,plan,range,place,source,gameMapId,extra){
+ addStop('trainer',name,area,x,y,[plan],range,[],place,plan+' trainer. '+extra,source,gameMapId,'NPC coordinate from the Forever profession guide');
+}
+function vendor(name,area,x,y,plan,range,place,materials,detail,source,gameMapId,extra){
+ addStop('vendor',name,area,x,y,[plan],range,materials,place,detail,source,gameMapId,'NPC coordinate from the Forever profession guide',extra);
+}
+function farm(name,area,x,y,materials,plans,range,place,detail,source,status){
+ const planList=Array.isArray(plans)?plans:[plans];if((materials||[]).some(m=>/cloth|bandage/i.test(m))&&!planList.includes('First Aid'))planList.push('First Aid');
+ addStop('farm',name,area,x,y,planList,range,materials,place,detail,source,null,status||'Guide-reported camp coordinate; camp covers a wider area');
+}
+// Tailoring trainer pins: Alliance only, with rank windows matching the craft route.
+trainer('Lawrence Schneider','storm',43.6,73.8,'Tailoring','1–75',"Duncan’s Textiles, Mage Quarter, Stormwind",icyTailor,1453,'Apprentice rank; city trainer.');
+trainer('Uthrar Threx','iron',43.6,28.2,'Tailoring','1–75',"Stonebrow’s Clothier, Great Forge, Ironforge",icyTailor,1455,'Gnome-friendly starting and city trainer.');
+trainer('Trianna','darn',63.6,21.6,'Tailoring','1–75',"Craftsmen’s Terrace, Darnassus",icyTailor,1457,'Alliance trainer.');
+trainer('Eldrin','elw',79.2,69.0,'Tailoring','1–75',"Eastvale Logging Camp, Elwynn Forest",icyTailor,1429,'Alliance trainer.');
+trainer('Grondal Moonbreeze','dark',38.2,40.6,'Tailoring','1–75',"Auberdine, Darkshore",icyTailor,1439,'Alliance trainer.');
+trainer('Sellandus','storm',42.0,76.2,'Tailoring','50–150',"Mage Quarter, Stormwind",icyTailor,1453,'Journeyman trainer.');
+trainer('Jormund Stonebrow','iron',43.6,28.2,'Tailoring','50–150',"Stonebrow’s Clothier, Great Forge, Ironforge",icyTailor,1455,'Journeyman trainer.');
+trainer('Me’lynn','darn',62.6,22.6,'Tailoring','50–150',"Craftsmen’s Terrace, Darnassus",icyTailor,1457,'Journeyman trainer.');
+trainer('Grarnik Goodstitch','stv',28.6,76.8,'Tailoring','50–150',"Booty Bay, Stranglethorn Vale",icyTailor,1434,'Journeyman trainer.');
+trainer('Georgio Bolero','storm',43.2,73.6,'Tailoring','125–225',"Duncan’s Textiles, Mage Quarter, Stormwind",icyTailor,1453,'Expert trainer; train at 125 Tailoring and character level 20.');
+trainer('Charles Worth','alter',17.8,60.6,'Tailoring','125–225',"Talismanic Textiles, Dalaran",icyTailor,1416,'Expert trainer; use the Dalaran area on the Alterac map.');
+trainer('Timothy Worthington','dust',66.2,51.6,'Tailoring','200–300',"Theramore Isle, Dustwallow Marsh",icyTailor,1445,'Alliance Artisan trainer; skill 200 and character level 35.');
+// Enchanting trainers and the Artisan destination. Annora is shown as a named destination only because this is an interior map point.
+trainer('Betty Quin','storm',43.2,63.8,'Enchanting','1–75',"Mage Quarter, Stormwind",icyEnchant,1453,'Apprentice trainer.');
+trainer('Thonys Pillarstone','iron',60.6,44.2,'Enchanting','1–75',"Great Forge, Ironforge",icyEnchant,1455,'Gnome-friendly city trainer.');
+trainer('Lalina Summermoon','darn',59.6,12.6,'Enchanting','1–75',"Craftsmen’s Terrace, Darnassus",icyEnchant,1457,'Alliance trainer.');
+trainer('Alanna Raveneye','teld',36.8,34.2,'Enchanting','1–75',"Oracle Glade, Teldrassil",icyEnchant,1438,'Alliance trainer.');
+trainer('Lucan Cordell','storm',43.0,64.4,'Enchanting','50–150',"Mage Quarter, Stormwind",icyEnchant,1453,'Journeyman and Expert trainer.');
+trainer('Gimble Thistlefuzz','iron',60.0,45.4,'Enchanting','50–150',"Great Forge, Ironforge",icyEnchant,1455,'Journeyman and Expert trainer.');
+trainer('Taladan','darn',58.6,13.6,'Enchanting','50–150',"Craftsmen’s Terrace, Darnassus",icyEnchant,1457,'Journeyman trainer.');
+trainer('Xylinnia Starshine','fera',31.6,44.2,'Enchanting','50–150',"Feathermoon Stronghold, Feralas",icyEnchant,1444,'Alliance Expert trainer.');
+trainer('Kitta Firewind','elw',64.8,70.6,'Enchanting','125–225',"Tower of Azora, Elwynn Forest",icyEnchant,1429,'Expert / Artisan-rank trainer for Alliance.');
+trainer('Vanessa Sellers','alter',16.6,62.6,'Enchanting','125–225',"Dalaran, Alterac Mountains",icyEnchant,1416,'Alliance trainer.');
+// Cooking trainers with verified map coordinates.
+trainer('Cook Ghilm','dun',68.4,54.6,'Cooking','1–150',"Gol’Bolar Quarry, Dun Morogh",icyCook,1426,'Local option for a Gnome start.');
+trainer('Gremlock Pilsnor','dun',47.6,52.4,'Cooking','1–150',"Kharanos, Dun Morogh",icyCook,1426,'Local Gnome starting trainer.');
+trainer('Daryl Riknussun','iron',60.4,38.0,'Cooking','1–150',"Great Forge, Ironforge",icyCook,1455,'City trainer.');
+trainer('Crystal Boughman','red',22.8,43.6,'Cooking','1–150',"Lakeshire, Redridge Mountains",icyCook,1433,'Alliance trainer.');
+trainer('Alegorn','darn',49.8,21.0,'Cooking','1–150',"Craftsmen’s Terrace, Darnassus",icyCook,1457,'Alliance trainer.');
+trainer('Stephen Ryback','storm',78.2,53.0,'Cooking','1–150',"Old Town, Stormwind",icyCook,1453,'Alliance trainer.');
+trainer('Tomas','elw',44.2,66.0,'Cooking','1–150',"Goldshire, Elwynn Forest",icyCook,1429,'Alliance trainer.');
+trainer('Zarrin','teld',57.0,61.2,'Cooking','1–150',"Dolanaar, Teldrassil",icyCook,1438,'Alliance trainer.');
+trainer('Hnaz Blunderflame','hyjal',15.6,50.2,'Cooking','1–150',"Elderwild, Mount Hyjal",icyCook,2482,'Alliance trainer in the Forever-added zone.');
+addStop('trainer','Annora','bad',null,null,['Enchanting'],'200–300',[],'Inside Uldaman, Badlands','Artisan Enchanting trainer. Annora is an interior NPC, so this Badlands map intentionally has no trainer pin. In the dungeon, use /mappin 1418 66.0 43.0 (rear interior map).','https://www.icy-veins.com/wow-forever/enchanting-leveling-guide/',null,'Interior location; not an outdoor coordinate');
+// First Aid trainer pins and the rank books / Artisan quest stop.
+trainer('Thamner Pol','dun',47.2,52.6,'First Aid','1–150',"Kharanos, Dun Morogh",icyAid,1426,'Local Gnome starting trainer.');
+trainer('Michelle Belle','elw',43.4,65.6,'First Aid','1–150',"Goldshire, Elwynn Forest",icyAid,1429,'Alliance trainer.');
+trainer('Shaina Fuller','storm',42.8,26.6,'First Aid','1–150',"Cathedral of Light, Stormwind",icyAid,1453,'Alliance trainer.');
+trainer('Nissa Firestone','iron',54.8,58.6,'First Aid','1–150',"Great Forge, Ironforge",icyAid,1455,'Alliance trainer.');
+trainer('Fremal Doohickey','wet',10.8,61.2,'First Aid','1–150',"Menethil Harbor, Wetlands",icyAid,1437,'Alliance trainer.');
+trainer('Byancie','teld',55.2,56.8,'First Aid','1–150',"Dolanaar, Teldrassil",icyAid,1438,'Alliance trainer.');
+trainer('Dannelor','darn',51.6,12.6,'First Aid','1–150',"Craftsmen’s Terrace, Darnassus",icyAid,1457,'Alliance trainer.');
+vendor('Deneb Walker','ara',27.0,58.8,'First Aid','125–225',"Stromgarde Keep, Arathi Highlands",['Expert First Aid – Under Wraps','Heavy Silk Bandage manual','Mageweave Bandage manual'],'Buy and read the Expert book at 125; buy both manuals before the Silk/Mageweave steps.',icyAid,1417,'Do this before skill 150 so the cap does not block the route.');
+trainer('Doctor Gustaf VanHowzen','dust',67.6,48.8,'First Aid','225–300',"Foothold Citadel, Theramore Isle",icyAid,1445,'At level 35 and 225 First Aid, complete Triage to unlock Artisan and the 300 cap.');
+// Alliance recipe, cookbook, and formula vendors with coordinate-backed locations.
+vendor('Shandrina','ash',49.6,67.0,'Cooking','125–225',"Silverwind Refuge, Ashenvale",['Expert Cookbook'],'Buy/read the Expert Cookbook at 125 Cooking before the 150+ route.',icyCook,1440);
+vendor('Hammon Karwn','ara',46.5,47.4,'Cooking','150–225',"Refuge Pointe, Arathi Highlands",['Roast Raptor recipe'],'Alliance vendor for Roast Raptor; the skill route uses it from 175–225.',icyCook,1417);
+vendor('Dirge Quikcleave','tana',52.6,28.0,'Cooking','225–300',"Gadgetzan inn, Tanaris",['Clamlette Surprise quest items','Tender Wolf Steak recipe'],'At level 35 and 225 Cooking, bring 12 Giant Eggs, 10 Zesty Clam Meat, and 20 Alterac Swiss; buy the late recipe before leaving.',icyCook,1446);
+vendor('Gikkix','tana',66.6,22.1,'Cooking','225–300',"Steamwheedle Port, Tanaris",['Yellowtail / Nightfin recipes'],'Recipe vendor. Use only if following the fish-based route in this workbook.','https://elitegrindlab.com/warcraft-forever/npcs/gikkix/',1446,'Recipe vendor coordinates are a guide reference; the current leveling route uses Tender Wolf Steak.');
+vendor('Kelsey Yance','stv',28.2,74.3,'Cooking','225–300',"Booty Bay, Stranglethorn Vale",['Redgill recipe'],'Optional fish-route recipe vendor.','https://azeroth.wiki/forever/map/stranglethorn-vale/kelsey-yance',1434);
+vendor('Qia','winter',61.2,37.2,'Tailoring','250–300',"Everlook, Winterspring",['Tailoring pattern'],'Late recipe pattern vendor. Verify the exact pattern on the Tailoring tab before making a dedicated trip.','https://foreverbase.org/en/db/npc/11189/',1450);
+vendor('Kania','sili',52.0,39.7,'Enchanting','275–300',"Cenarion Hold, Silithus",['Late enchanting formula'],'Late formula vendor; follow the selected Enchanting row for the required formula.','https://azeroth.wiki/forever/map/silithus/kania',1454);
+vendor('Pexmit Elderwild','hyjal',59.6,49.2,'Tailoring','275–300',"Elderwild, Mount Hyjal",['Runecloth Cuffs pattern'],'Buy Pattern: Runecloth Cuffs here; confirm the pattern and listed materials before farming.','https://azeroth.wiki/forever/map/mount-hyjal/pexmit',2482);
+vendor('Lorelae Wintersong','moon',48.6,40.0,'Enchanting','295–300',"Nighthaven, Moonglade",['Runed Arcanite Rod formula'],'Late formula vendor. Confirm the formula and Blacksmith-crafted Arcanite Rod before traveling.','https://www.wowhead.com/classic/npc=12022/lorelae-wintersong',1458);
+// Alliance cloth camps: guide timing is tied to the profession skill brackets that consume each material.
+farm('Gol’Bolar Quarry troggs','dun',72,55,['Linen Cloth'],'Tailoring','1–55','Gol’Bolar Quarry • levels 8–10','Gnome-side Linen option while leveling in Dun Morogh; gather early Linen for bolts/belts and First Aid.','https://bytetavern.com/wow-forever-linen-cloth-farming/','Classic spawn/loot reference plotted on Forever zone map');
+farm('Riverpaw / Defias • Jangolode Mine','west',47,19,['Linen Cloth','Bandage Cloth'],'Tailoring','1–80','Jangolode Mine • levels 11–13','Strong Alliance Linen camp. Farm while Tailoring 1–55 or First Aid 1–80; stop when you have the Linen total for the next craft batch.','https://bytetavern.com/wow-forever-linen-cloth-farming/','Camp coordinate; individual mobs move within the camp');
+farm('Gold Coast Quarry gnolls','west',30,50,['Linen Cloth','Bandage Cloth'],'Tailoring','1–80','Gold Coast Quarry • levels 13–15','Westfall Linen alternative for Tailoring 1–55 and First Aid 1–80.',clothSource);
+farm('Moonbrook Defias','west',44,69,['Linen Cloth','Bandage Cloth'],'Tailoring','1–80','Moonbrook • levels 13–15','Westfall Linen alternative for Tailoring 1–55 and First Aid 1–80.',clothSource);
+farm('Stonesplinter Valley troggs','loch',33,79,['Linen Cloth','Bandage Cloth'],'Tailoring','1–80','Stonesplinter Valley • levels 11–14','Large Alliance camp; a convenient Gnome-route farm before heading south from Thelsamar.',clothSource);
+farm('Silver Stream Mine kobolds','loch',37,19,['Linen Cloth','Bandage Cloth'],'Tailoring','1–80','Inside Silver Stream Mine • levels 10–12','The marker is the cave area/entrance; this is an underground camp. Farm for Linen before Tailoring 55 / First Aid 80.',clothSource,'Camp coordinate; inside-cave terrain may not align to the outdoor map surface');
+farm('Stonesplinter hills','loch',27,52,['Linen Cloth','Bandage Cloth'],'Tailoring','1–80','West of the Loch Modan road • levels 11–12','Small Alliance fallback camp for Linen.',clothSource);
+farm('Ameth’Aran undead and furbolgs','dark',42,58,['Linen Cloth','Bandage Cloth'],'Tailoring','1–80','Ameth’Aran • levels 10–14','Alliance Linen option while questing in Darkshore.',clothSource);
+farm('Syndicate • Durnholde Keep','hill',79,43,['Wool Cloth','Bandage Cloth'],'Tailoring','55–150','Durnholde Keep • levels 20–22','Wool camp for Tailoring 55–100 and First Aid 80–150. Farm humanoids as you enter the Wool steps; it also drops some Linen.',clothSource);
+farm('Syndicate • Durnholde camp','hill',66,48,['Wool Cloth','Bandage Cloth'],'Tailoring','55–150','Syndicate camp near Durnholde • levels 20–22','Alternate Wool camp for Tailoring 55–100 / First Aid 80–150.',clothSource);
+farm('Mosshide gnolls','wet',35,30,['Wool Cloth','Bandage Cloth'],'Tailoring','55–150','Wetlands • around levels 22–27','Wool farm alternative on Alliance leveling route; loot humanoids while completing Wetlands quests.',clothSource);
+farm('Thistlefur furbolgs','ash',35,38,['Wool Cloth','Bandage Cloth'],'Tailoring','55–150','North-west Ashenvale • levels 23–24','Wool farm alternative; exact point is the guide-reported camp center.',clothSource);
+farm('Drywhisker Gorge kobolds','ara',82,35,['Silk Cloth','Bandage Cloth'],'Tailoring','100–225','Drywhisker Gorge • levels 35–38','High-rate Silk camp; gather for Tailoring 100–215 and First Aid 150–210.',clothSource);
+farm('Boulderfist Hall ogres','ara',53,76,['Silk Cloth','Bandage Cloth'],'Tailoring','100–225','Boulderfist Hall • levels 35–37','Arathi Silk alternative; good mid-tier farm for Tailoring / First Aid.',clothSource);
+farm('Witherbark Village trolls','ara',67,68,['Silk Cloth','Bandage Cloth'],'Tailoring','100–225','Witherbark Village • levels 32–36','Arathi Silk farm; this marker indicates the north camp.',clothSource);
+farm('Witherbark south camp','ara',68,80,['Silk Cloth','Bandage Cloth'],'Tailoring','100–225','South Witherbark camp • levels 32–36','Arathi Silk farm; second camp coordinate.',clothSource);
+farm('Syndicate • Northfold Manor','ara',32,29,['Silk Cloth','Bandage Cloth'],'Tailoring','100–225','Northfold Manor • levels 30–33','Arathi Silk alternative; farm the Syndicate.',clothSource);
+farm('Boulderfist Outpost ogres','ara',34,45,['Silk Cloth','Bandage Cloth'],'Tailoring','100–225','Boulderfist Outpost • levels 32–34','Arathi Silk alternative.',clothSource);
+farm('Go’Shek Farm peons','ara',62,57,['Silk Cloth','Bandage Cloth'],'Tailoring','100–225','Go’Shek Farm • levels 33–35','Alliance-only camp listed as an Arathi Silk farm.',clothSource);
+farm('Bloodscalp ruins trolls','stv',24,11,['Silk Cloth','Bandage Cloth'],'Tailoring','100–225','North-west ruins • levels 34–37','Stranglethorn Silk farm; Tailoring 100–215 / First Aid 150–210.',clothSource);
+farm('Kurzen’s Compound','stv',47,8,['Silk Cloth','Bandage Cloth'],'Tailoring','100–225','Kurzen’s Compound • levels 32–38','Stranglethorn Silk farm; gather while questing in the northern valley.',clothSource);
+farm('Lake Nazferiti Venture Co.','stv',44,20,['Silk Cloth','Bandage Cloth'],'Tailoring','100–225','Lake Nazferiti • levels 34–36','Stranglethorn Silk alternative.',clothSource);
+farm('Lost Ones • north Swamp of Sorrows','swamp',49,32,['Silk Cloth','Bandage Cloth'],'Tailoring','100–225','Northern Swamp of Sorrows • levels 34–38','Silk camp. Route spans the wetlands south/east toward Fallow Sanctuary; the pin is a starting-area coordinate, not a single spawn.',clothSource,'Guide-reported route start; camp spans multiple coordinates');
+farm('Dunemaul ogres','tana',40,54,['Mageweave Cloth','Bandage Cloth'],'Tailoring','140–260','Dunemaul Compound • levels 45–48','High-rate Mageweave camp. Farm when Tailoring reaches Bolt of Mageweave / bag steps and First Aid reaches Mageweave Bandages.',clothSource);
+farm('Dunemaul east camp','tana',47,65,['Mageweave Cloth','Bandage Cloth'],'Tailoring','140–260','Southern Dunemaul • levels 45–48','Second Dunemaul camp coordinate for Mageweave.',clothSource);
+farm('Dunemaul south camp','tana',41,73,['Mageweave Cloth','Bandage Cloth'],'Tailoring','140–260','Southern Dunemaul • levels 45–48','Third Dunemaul camp coordinate for Mageweave.',clothSource);
+farm('Wastewander bandits','tana',60,24,['Mageweave Cloth','Bandage Cloth'],'Tailoring','140–260','East of Gadgetzan • levels 40–45','Mageweave alternative; these mobs are lower yield than Dunemaul in the guide data.',clothSource);
+farm('Wastewander south camp','tana',63,36,['Mageweave Cloth','Bandage Cloth'],'Tailoring','140–260','East Tanaris • levels 40–45','Second Wastewander camp coordinate for Mageweave.',clothSource);
+farm('Lost Rigger Cove pirates','tana',74,46,['Mageweave Cloth','Bandage Cloth'],'Tailoring','140–260','Lost Rigger Cove • levels 44–45','Southsea pirate alternative for Mageweave.',clothSource);
+farm('Jadefire Glen satyrs','fel',41,85,['Mageweave Cloth','Felcloth'],'Tailoring','140–300','Jadefire Glen • levels 49–51','Mageweave while leveling in Felwood; the satyrs can also drop Felcloth for the Mooncloth craft step.',clothSource);
+farm('Deadwood Village furbolgs','fel',48,91,['Mageweave Cloth','Bandage Cloth'],'Tailoring','140–260','Deadwood Village • levels 48–50','Felwood Mageweave alternative.',clothSource);
+farm('Bloodsail pirates','stv',24,54,['Mageweave Cloth','Silk Cloth','Bandage Cloth'],'Tailoring','140–260','Bloodsail coast • levels 40–45','Stranglethorn Mageweave/Silk alternative; coastal camp.',clothSource);
+farm('Venture Co. mine / Skullsplitter trolls','stv',44,43,['Mageweave Cloth','Silk Cloth','Bandage Cloth'],'Tailoring','140–260','Lake Nazferiti / Venture Co. • levels 40–44','Stranglethorn Mageweave alternative.',clothSource);
+farm('Twilight Post','sili',26,34,['Runecloth','Bandage Cloth'],'Tailoring','205–300','Twilight Post • levels 58–60','High-rate Runecloth. Farm when Tailoring enters Runecloth recipes or First Aid reaches Runecloth Bandages.',clothSource);
+farm('Twilight Base Camp','sili',39,45,['Runecloth','Bandage Cloth'],'Tailoring','205–300','Twilight Base Camp • levels 58–60','High-rate Runecloth camp.',clothSource);
+farm('Twilight Outpost','sili',19,84,['Runecloth','Bandage Cloth'],'Tailoring','205–300','Twilight Outpost • levels 58–60','High-rate Runecloth camp.',clothSource);
+farm('North-east Twilight camp','sili',69,16,['Runecloth','Bandage Cloth'],'Tailoring','205–300','North-east camp • levels 58–61','High-rate Runecloth camp.',clothSource);
+farm('Southwind Village druids / sentinels','sili',62,53,['Runecloth','Bandage Cloth'],'Tailoring','205–300','Southwind Village • levels 55–57','Lower-yield Runecloth fallback compared with the Twilight camps.',clothSource);
+farm('Gahrron’s Withering ghosts','wpl',63,58,['Runecloth','Bandage Cloth','Ironweb Spider Silk'],'Tailoring','205–300','Gahrron’s Withering • levels 56–58','Runecloth farm and Ironweb Spider Silk drop region; see silk markers for the precise spider route.',clothSource);
+farm('Deadwood furbolgs • Felpaw Village','fel',62,9,['Runecloth','Bandage Cloth'],'Tailoring','205–300','Felpaw Village • levels 53–55','Runecloth fallback; lower yield than Silithus in the route data.',clothSource);
+farm('Jaedenar cultists','fel',38,55,['Runecloth','Bandage Cloth'],'Tailoring','205–300','Jaedenar • levels 50–55','Runecloth fallback; lower yield than Silithus.',clothSource);
+farm('Jadefire Run satyrs','fel',42,18,['Felcloth','Runecloth'],'Tailoring','230–300','Jadefire Run • levels 52–54','Farm Felcloth for Mooncloth crafts. Mooncloth also requires a Moonwell and has a long cooldown; begin early.',clothSource);
+farm('Jadefire satyrs south of Jaedenar','fel',36,68,['Felcloth','Mageweave Cloth','Runecloth'],'Tailoring','230–300','South of Jaedenar • levels 50–52','Felcloth alternative while also collecting Mageweave and some Runecloth.',clothSource);
+farm('Legashi satyrs','az',null,null,['Felcloth','Runecloth'],'Tailoring','230–300','Legash Encampment, north-east Azshara','Felcloth area reported by the guide; no reliable coordinate is pinned here, so use the named encampment only.',clothSource,'Named region only; exact pin unavailable');
+farm('Golden Pearl naga','fera',26,67,['Golden Pearl'],'Tailoring','250–300','Shalzaru’s Lair • Feralas','Rare Golden Pearl farm; drops are not guaranteed. Only travel when the selected route row actually needs the Pearl.',clothSource);
+farm('Raptors / eggs while questing','ara',null,null,['Raptor Flesh','Raptor Egg','Giant Egg'],'Cooking','1–225','Arathi Highlands / nearby raptor areas','Cooking meat/egg drops are from creatures rather than a single resource node. The route vendor is pinned separately; no unverified mob camp is marked.',icyCook,null,'Named region only; exact pin unavailable');
+farm('Freshwater fish','dun',null,null,['Brilliant Smallfish','Longjaw Mud Snapper','Raw fish'],'Cooking','1–150','Dun Morogh / Loch Modan freshwater','Fish from water, not a fixed node. Choose a lake or stream while questing; this marker is deliberately not plotted without a verified spot coordinate.',icyCook,null,'Named water regions only; exact fishing point varies');
+farm('Lake Everstill fishing','red',31,49,['Bristle Whisker Catfish','Raw fish'],'Cooking','100–150','Lake Everstill, Redridge Mountains','Farm Catfish while Cooking 100–150 if using the Bristle Whisker route. Fishing spots can move around the lake.',clothSource,'Lake/camp reference coordinate; fishing pools move');
+farm('Raptor flesh / eggs','ara',null,null,['Raptor Flesh','Raptor Egg'],'Cooking','130–225','Arathi Highlands raptor areas','For the Omelet / Roast Raptor alternative, kill raptors or buy the ingredients; no single exact camp was verified.',icyCook,null,'Named region only; exact pin unavailable');
+// Ironweb has a useful outdoor spider route, but inherited Classic loot records can differ from Forever drops.
+farm('Searing Lava Spiders','sear',40.4,69.0,['Ironweb Spider Silk'],'Tailoring','250–300','The Sea of Cinders, Searing Gorge • level 49','Reported first search area for Ironweb. Loot is inherited Classic/QuestieDB data; confirm actual Forever drops during a short test before farming a large batch.',silkSource,'Guide-reported spider coordinate; loot record is Classic-derived');
+farm('Searing Lava Spiders • east sweep','sear',43.9,68.2,['Ironweb Spider Silk'],'Tailoring','250–300','The Sea of Cinders, Searing Gorge • level 49','Second search point on the outdoor spider sweep. Confirm Ironweb drops before committing to a long farm.',silkSource,'Guide-reported spider coordinate; loot record is Classic-derived');
+farm('Searing Lava Spiders • southwest','sear',29.1,76.2,['Ironweb Spider Silk'],'Tailoring','250–300','Southern Searing Gorge • level 49','Southern sweep point for Ironweb Spider Silk; use only if the named spiders spawn in your current Forever build.',silkSource,'Guide-reported spider coordinate; loot record is Classic-derived');
+farm('Searing Lava Spiders • lower southwest','sear',28.9,77.6,['Ironweb Spider Silk'],'Tailoring','250–300','Southern Searing Gorge • level 49','Alternate southern search area; confirm loot in the live client.',silkSource,'Guide-reported spider coordinate; loot record is Classic-derived');
+farm('Carrion Lurkers • Writhing Haunt','wpl',52.5,70.5,['Ironweb Spider Silk'],'Tailoring','250–300','The Writhing Haunt, Western Plaguelands • levels 52–53','Reported spider search area for Ironweb; check target name and actual loot before repeating the route.',silkSource,'Guide-reported spider coordinate; loot record is Classic-derived');
+farm('Carrion Lurkers • north sweep','wpl',46.4,59.9,['Ironweb Spider Silk'],'Tailoring','250–300','Western Plaguelands • levels 52–53','Second search point in the WPL Ironweb route.',silkSource,'Guide-reported spider coordinate; loot record is Classic-derived');
+farm('Carrion Lurkers • north-east sweep','wpl',51.1,53.1,['Ironweb Spider Silk'],'Tailoring','250–300','Western Plaguelands • levels 52–53','Third search point in the WPL Ironweb route.',silkSource,'Guide-reported spider coordinate; loot record is Classic-derived');
+farm('Plague Lurker','wpl',55.8,63.6,['Ironweb Spider Silk'],'Tailoring','250–300','Western Plaguelands • levels 54–55','Reported Plague Lurker point; loot data is inherited Classic data, so confirm current Forever drops.',silkSource,'Guide-reported spider coordinate; loot record is Classic-derived');
+// Forever-reported quest NPC coordinates are visually distinguished and labeled as community reports.
+const riverQuestPins=[
+['Argo Brinewhistle',79.9,52.5],['Ashe Amberhall',66.8,81.1],['Benjy Wheeler',54.9,73.1],['Bertrand Ironbrow',63.4,80.6],['Captain Bentcoin',91.3,39.8],['Captain Haynes',91.2,39.9],['Cassandra Wheeler',64.6,83.0],['Cedric Dalton',39.6,74.7],['Clubtoe',50.0,47.0],['Clugfist',64.5,14.7],['Curly',46.1,71.0],['Demar Brant',66.7,81.1],['Dunston Willis',68.7,12.6],['Ember Bladewhisper',66.1,79.6],['Fimbo Greasemitz',79.0,54.2],['Friz Frazzlespark',77.1,52.9],['Fuzzle',47.3,51.4],['Gelinda Coppergleam',30.2,69.1],['Gobam',67.0,17.2],['Goren Grayfellow',37.7,76.0],['Gray Dawnbright',78.8,54.3],['Gretchen Mayberry',60.7,81.5],['Gritta Chumwater',78.4,55.1],['Halligan Turner',41.2,63.0],['Hurley',41.3,64.5],['Innkeeper Zizplink',78.8,54.0],['Jasper Geartoggle',76.0,52.7],['Jezap Jinglesprocket',65.6,21.4],['Kreza Darkthorn',59.9,46.0],['Lost Horse',53.8,66.5],['Marshal Ryan',26.2,40.9],['Picked Carcass',61.6,58.9],['Scout Bolain',23.7,67.9],['Sergeant Riftan',30.7,49.1],['Sister Rowland',61.8,83.2],['Sleebo Fizzlespout',68.1,48.6],['Tessa Dawnbright',63.8,82.3],['Watcher Cornelius',61.6,64.0],['Wharfmaster Whizzbuzz',79.4,52.7],['Wheatley',63.6,85.1]
+];
+riverQuestPins.forEach(q=>addStop('quest',q[0],'river',q[1],q[2],['Leveling Route','Warlock Talents'],'38–50',[],'Riverglades • quest NPC','Community-reported position, not yet checked in game. Use as a lead and confirm the NPC in the live client.','https://wow-forever.gg/db/zones/16591-riverglades/',null,'Community-reported coordinate; unverified in game'));
+addStop('quest','Strange Pylons • quest giver','shend',43.6,34.2,['Leveling Route','Warlock Talents'],'40–50',[],'Shen’dralas • level 43 quest','Recorded quest-giver coordinate in the Forever quest entry; use this exact marker when you reach the 40–50 bracket.','https://wow-forever.gg/db/quests/92914-strange-pylons/',null,'Quest position recorded in Forever data');
+const detailMeta={trainer:{icon:'T',color:'#61cee1',filter:'Trainers'},vendor:{icon:'V',color:'#f3bd54',filter:'Recipe Vendors'},farm:{icon:'F',color:'#8ddb61',filter:'Farming Stops'},quest:{icon:'Q',color:'#c6a3f3',filter:'Quest NPCs'}};
+const levelDestinations={'1–10':['dun'],'10–20':['loch','west','dark'],'20–30':['red','dusk','wet','ash'],'30–40':['stv','ara','des','river'],'40–50':['river','tana','fera','hind','sear','bad'],'50–60':['ung','fel','burn','wpl','epl','winter','sili','hyjal']};
+let visiblePoints=[],activeArea='dun',activePlan='All Stops',activeStep=0,activeZoneId='dun',mapZoom=1,mapX=0,mapY=0;
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function cleanText(s){return String(s||'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim()}
+function normalized(s){return cleanText(s).toLowerCase().replace(/[’‘']/g,"'").replace(/[^a-z0-9]+/g,' ').trim()}
+function activeMap(){return detailMaps[activeArea]||detailMaps.dun}
+function selectedRouteRow(){if(activePlan==='Tailoring')return tailorRows[activeStep];if(activePlan==='Enchanting')return enchantRows[activeStep];if(activePlan==='Cooking')return cookRows[activeStep];if(activePlan==='First Aid')return aidRows[activeStep];if(activePlan==='Leveling Route')return levelRows[activeStep];if(activePlan==='Warlock Talents')return talentGroups[activeStep];return null}
+function routeSteps(plan){
+ if(plan==='Tailoring')return tailorRows.map(r=>r[0]+' · '+r[3]);
+ if(plan==='Enchanting')return enchantRows.map(r=>r[0]+' · '+r[2]);
+ if(plan==='Cooking')return cookRows.map(r=>r[0]+' · '+r[1]);
+ if(plan==='First Aid')return aidRows.map(r=>r[0]+' · '+r[1]);
+ if(plan==='Leveling Route')return levelRows.map(r=>r[0]+' · '+r[1]);
+ if(plan==='Warlock Talents')return talentGroups.map(r=>'Level '+r[2]+' · '+r[0]+' (+'+r[3]+' talent point'+(r[3]===1?'':'s')+')');
+ return ['All map stops'];
+}
+function currentRouteCopy(){
+ const r=selectedRouteRow();if(!r)return null;
+ if(activePlan==='Tailoring')return{range:r[0],title:r[3],crafts:r[2]+' crafts · '+r[1],source:cleanText(r[4]),materials:r[5],extra:''};
+ if(activePlan==='Enchanting')return{range:r[0],title:r[2],crafts:r[1]+' crafts',source:cleanText(r[3]),materials:r[4],extra:''};
+ if(activePlan==='Cooking')return{range:r[0],title:r[1],crafts:r[2]+' crafts',source:cleanText(r[4]),materials:r[3],extra:r[5]};
+ if(activePlan==='First Aid')return{range:r[0],title:r[1],crafts:r[2]+' crafts',source:cleanText(r[4]),materials:r[3],extra:r[5]};
+ if(activePlan==='Leveling Route')return{range:'Character level '+r[0],title:r[1],crafts:'Zones: '+r[1],source:'Dungeons: '+r[2],materials:r[3],extra:r[4]};
+ if(activePlan==='Warlock Talents')return{range:'Character level '+r[2],title:r[0]+' · +'+r[3]+' talent point'+(r[3]===1?'':'s')+' ('+r[1]+')',crafts:'Spend this point in the Talent window.',source:'Talent points are not world-map objects; use the level-route zones below for this character level.',materials:r[4],extra:''};
+ return null;
+}
+function parseRange(s){const m=String(s||'').match(/(\d+)\s*[–-]\s*(\d+)/);return m?[Number(m[1]),Number(m[2])]:null}
+function overlap(a,b){return !!(a&&b&&a[0]<=b[1]&&b[0]<=a[1])}
+function guideTextForRow(){
+ const r=selectedRouteRow();if(!r)return '';
+ if(activePlan==='Tailoring')return normalized([r[0],r[3],r[4],r[5]].join(' '));
+ if(activePlan==='Enchanting')return normalized([r[0],r[2],r[3],r[4]].join(' '));
+ if(activePlan==='Cooking')return normalized([r[0],r[1],r[3],r[4],r[5]].join(' '));
+ if(activePlan==='First Aid')return normalized([r[0],r[1],r[3],r[4],r[5]].join(' '));
+ if(activePlan==='Leveling Route')return normalized(r.join(' '));
+ if(activePlan==='Warlock Talents')return normalized(r.join(' '));
+ return '';
+}
+function pointMatchesStep(p){
+ if(activePlan==='All Stops')return true;
+ if(!p.plans.includes(activePlan))return false;
+ const row=selectedRouteRow();if(!row)return true;
+ if(activePlan==='Leveling Route'||activePlan==='Warlock Talents'){
+  if(p.kind!=='quest')return false;
+  const band=activePlan==='Leveling Route'?row[0]:levelRows.find(q=>{const lr=parseRange(q[0]);return lr&&Number(row[2])>=lr[0]&&Number(row[2])<=lr[1]})?.[0];
+  return !!(band&&p.range&&overlap(parseRange(p.range),parseRange(band)));
+ }
+ const text=guideTextForRow(),terms=(p.materials||[]).concat([p.name]);
+ if(terms.some(t=>t&&normalized(t).length>2&&text.includes(normalized(t))))return true;
+ if(p.kind==='trainer'||p.kind==='vendor')return overlap(parseRange(p.range),parseRange(currentRouteCopy()?.range));
+ return false;
+}
+function visibleStops(){
+ const filt=document.getElementById('detailFilter')?.value||'All Marker Types';
+ return detailStops.filter(p=>p.area===activeArea&&p.x!=null&&p.y!=null&&pointMatchesStep(p)&&(filt==='All Marker Types'||detailMeta[p.kind].filter===filt));
+}
+function populateAreaPicker(){
+ const sel=document.getElementById('detailArea');sel.innerHTML='';
+ Object.keys(detailMaps).sort((a,b)=>detailMaps[a].title.localeCompare(detailMaps[b].title)).forEach(k=>{const o=document.createElement('option');o.value=k;o.textContent=detailMaps[k].title;sel.append(o)});
+}
+function populateStepPicker(reset){
+ const sel=document.getElementById('mapStep'),items=routeSteps(activePlan);sel.innerHTML='';
+ items.forEach((label,i)=>{const o=document.createElement('option');o.value=String(i);o.textContent=label;sel.append(o)});
+ if(activePlan==='All Stops'){sel.disabled=true;activeStep=0}else{sel.disabled=false;if(reset||activeStep>=items.length)activeStep=0;sel.value=String(activeStep)}
+}
+function formatCoord(p){return p.x==null||p.y==null?'No verified map point':Number(p.x).toFixed(Number.isInteger(p.x)?0:1)+', '+Number(p.y).toFixed(Number.isInteger(p.y)?0:1)}
+function refreshMapImage(){
+ const m=activeMap(),img=document.getElementById('zoneMapArt'),link=mapPage(activeArea);
+ img.alt='High-resolution in-game zone map artwork: '+m.title;
+ document.getElementById('mapSourceLink').href=link;document.getElementById('mapFallbackLink').href=link;
+ document.getElementById('mapLoadError').hidden=true;
+ img.onload=()=>document.getElementById('mapLoadError').hidden=true;
+ img.onerror=()=>document.getElementById('mapLoadError').hidden=false;
+ img.src=imgUrl(activeArea);
+}
+function applyMapTransform(){document.getElementById('gameMapCanvas').style.transform='translate('+mapX+'px,'+mapY+'px) scale('+mapZoom+')'}
+function resetMapView(){mapZoom=1;mapX=0;mapY=0;applyMapTransform()}
+function focusMapPoint(p){
+ const viewport=document.getElementById('mapViewport'),canvas=document.getElementById('gameMapCanvas');
+ mapZoom=2.25;
+ mapX=viewport.clientWidth/2-(viewport.clientWidth*p.x/100)*mapZoom;
+ mapY=viewport.clientHeight/2-(canvas.clientHeight*p.y/100)*mapZoom;
+ applyMapTransform();
+}
+function pointDetailHTML(p){
+ const coord=formatCoord(p),map=detailMaps[p.area],cmd=p.gameMapId&&p.x!=null&&p.y!=null?'/mappin '+p.gameMapId+' '+Number(p.x).toFixed(1)+' '+Number(p.y).toFixed(1):(p.name==='Annora'?'/mappin 1418 66.0 43.0':'');
+ const source=p.source?'<a href="'+esc(p.source)+'" target="_blank" rel="noopener">Source ↗</a>':'';
+ return '<strong>'+esc(p.name)+'</strong><br>'+esc(p.place)+'<br><b>'+coord+' · '+esc(map.title)+' map</b><br>'+esc(p.status)+(p.extra?'<br>'+esc(p.extra):'')+'<br>'+esc(p.detail)+(cmd?'<br><code>'+esc(cmd)+'</code> <button class="copy-map-command" type="button" data-command="'+esc(cmd)+'">COPY</button>':'')+'<span class="source-note">'+source+'</span>';
 }
 function selectPoi(i){
  const p=visiblePoints[i];if(!p)return;
  document.querySelectorAll('.poi-row').forEach((e,n)=>e.classList.toggle('active',n===i));
  document.querySelectorAll('.map-pin').forEach((e,n)=>e.classList.toggle('selected',Number(e.dataset.poi)===i));
- document.getElementById('poiInspect').innerHTML='<strong>'+p.name+'</strong><br>'+p.place+(p.coord?'<br><b>'+p.coord+'</b>':'')+'<br>'+p.detail;
+ document.getElementById('poiInspect').innerHTML=pointDetailHTML(p);
+ document.querySelectorAll('.copy-map-command').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.command);b.textContent='COPIED'}catch(_){b.textContent='COPY FROM TEXT'}})
+}
+function renderMapPins(){
+ const layer=document.getElementById('detailPoiLayer'),list=document.getElementById('poiList');layer.innerHTML='';list.innerHTML='';
+ visiblePoints=visibleStops();document.getElementById('poiCount').textContent=visiblePoints.length+' '+(visiblePoints.length===1?'PIN':'PINS');
+ visiblePoints.forEach((p,i)=>{
+  const meta=detailMeta[p.kind],pin=document.createElement('button');pin.type='button';pin.className='map-pin '+p.kind;pin.style.setProperty('--px',p.x+'%');pin.style.setProperty('--py',p.y+'%');pin.style.setProperty('--pin-color',meta.color);pin.textContent=meta.icon;pin.title=p.name+' · '+p.place+' · '+formatCoord(p);pin.setAttribute('aria-label',pin.title);pin.dataset.label=p.name;pin.dataset.poi=String(i);pin.onclick=()=>selectPoi(i);layer.append(pin);
+  const row=document.createElement('button');row.type='button';row.className='poi-row';row.innerHTML='<span class="poi-icon '+p.kind+'">'+meta.icon+'</span><span><strong>'+esc(p.name)+'</strong><small>'+esc(p.place)+' · '+esc(formatCoord(p))+' · '+esc(p.plans.join(' / '))+'</small></span><em>SHOW</em>';row.onclick=()=>{selectPoi(i);focusMapPoint(p)};list.append(row);
+ });
+ if(visiblePoints.length)selectPoi(0);else document.getElementById('poiInspect').textContent='No verified point matches this map and filter. Check “Other stops for this step” to jump to the matching zone; named regions without surveyed coordinates are deliberately left unpinned.';
+}
+function currentMapContext(){
+ const contextId=Object.keys(zoneMapRef).find(k=>zoneMapRef[k]===activeArea&&!['hall','ruins','excav','dalar','drowned','kroldok','alcaz','blackmaw','shaper','barrow','summit','onyxia'].includes(k))||({storm:'elw',iron:'dun',darn:'teld'}[activeArea])||activeZoneId;
+ const z=zone(contextId),m=activeMap();
+ document.getElementById('detailTitle').textContent=m.title;
+ document.getElementById('detailBand').textContent='AREA '+m.id+' · '+(z[2]==='EK'?'EASTERN KINGDOMS':z[2]==='SKY'?'SKYWALL / ISLAND REGION':'KALIMDOR')+' · ROUTE ZONE '+z[1]+' '+z[3];
+ document.getElementById('detailSummaryTitle').textContent=m.title+' • Field Map';
+ document.getElementById('detailSummaryText').textContent=z[8]+' '+z[9];
+ document.getElementById('detailCoordinates').textContent='ZONE COORDINATES · X '+String.fromCharCode(0x2190)+' WEST → EAST · Y NORTH → SOUTH · HOVER OR SELECT A PIN FOR ITS SOURCE';
+}
+function routeMaterialCaveat(info){
+ const text=normalized([info?.title,info?.materials,info?.source,info?.extra].join(' '));
+ const notes=[];
+ if(activePlan==='Enchanting'&&/(dust|essence|disenchant|shard)/.test(text))notes.push('Enchanting dust, essences, and shards come from disenchanting eligible gear; there is no fixed open-world node to pin. Use suitable green drops from questing/dungeons or compare the Auction House.');
+ if(activePlan==='Cooking'&&/(fish|smallfish|snapper|catfish|trout|yellowtail|nightfin|raw)/.test(text))notes.push('Fishing pools move around water and are not fixed map pins. The route text names the zone or lake; select that zone map and fish nearby.');
+ if(activePlan==='Tailoring'&&/rugged leather/.test(text))notes.push('Rugged Leather comes from skinning suitable high-level beasts or the Auction House; this sheet has no verified single camp coordinate for that ingredient.');
+ if(activePlan==='Tailoring'&&/mooncloth/.test(text))notes.push('Mooncloth needs a Moonwell and has a long cooldown. The map only pins the confirmed Felcloth camps; it does not guess a Moonwell coordinate.');
+ if(activePlan==='Cooking'&&/(boar meat|coyote meat|raptor flesh|raptor egg|giant egg|wolf meat)/.test(text))notes.push('Meat and eggs drop from beasts rather than fixed resource nodes. Gather them while questing or use the Auction House; the guide does not place an unverified mob-camp pin.');
+ return notes;
+}
+function professionRankHint(){
+ const row=selectedRouteRow();if(!row||!['Tailoring','Enchanting','Cooking','First Aid'].includes(activePlan))return '';
+ const rg=parseRange(row[0]);if(!rg)return '';
+ const thresholds={Tailoring:[[50,'Journeyman rank','skill 50 and character level 10'],[125,'Expert rank','skill 125 and character level 20'],[200,'Artisan rank','skill 200 and character level 35']],Enchanting:[[50,'Journeyman rank','skill 50 and character level 10'],[125,'Expert rank','skill 125 and character level 20'],[200,'Artisan rank','skill 200 and character level 35']],Cooking:[[50,'Journeyman rank','skill 50 and character level 10'],[125,'Expert Cookbook','skill 125 from Shandrina in Ashenvale'],[225,'Artisan Cooking quest','skill 225 and character level 35; complete Clamlette Surprise with Dirge']], 'First Aid':[[75,'Journeyman rank','skill 75'],[125,'Expert First Aid book','skill 125; buy/read from Deneb Walker in Arathi'],[225,'Artisan Triage quest','skill 225 and character level 35 with Doctor Gustaf in Theramore']]};
+ const item=thresholds[activePlan].find(t=>rg[0]<=t[0]+10&&rg[1]>=t[0]);return item?'Rank check: before pushing past '+item[0]+' skill, learn '+item[1]+' ('+item[2]+').':'';
+}
+function renderRouteStepCard(){
+ const card=document.getElementById('routeStepCard'),info=currentRouteCopy();
+ if(!info){card.innerHTML='<strong>ROUTE INTEL</strong><p>Choose Leveling, Warlock Talents, or a profession guide. Then pick a step to see the matching map pins and stops.</p>';return}
+ let html='<strong>'+esc(activePlan.toUpperCase())+' • STEP INTEL</strong><div class="route-meta">'+esc(info.range)+' · '+esc(info.crafts)+'</div><h4>'+esc(info.title)+'</h4>';
+ if(info.materials)html+='<p><b>Materials:</b> '+esc(cleanText(info.materials))+'</p>';
+ if(info.source)html+='<p><b>Trainer / source:</b> '+esc(info.source)+'</p>';
+ if(info.extra)html+='<p><b>When / route note:</b> '+esc(cleanText(info.extra))+'</p>';
+ const rankHint=professionRankHint();if(rankHint)html+='<p class="rank-alert"><b>TRAINING CHECK:</b> '+esc(rankHint)+'</p>';
+ const caveats=routeMaterialCaveat(info);if(caveats.length)html+='<p class="route-caveat">'+caveats.map(esc).join('<br><br>')+'</p>';
+ const source=activePlan==='Tailoring'?icyTailor:activePlan==='Enchanting'?icyEnchant:activePlan==='Cooking'?icyCook:activePlan==='First Aid'?icyAid:'https://wow-forever.gg/atlas/';
+ html+='<div class="route-links"><a href="'+source+'" target="_blank" rel="noopener">Open guide source ↗</a></div>';card.innerHTML=html;
+}
+function getLevelRangeForTalent(level){return levelRows.find(r=>{const p=parseRange(r[0]);return p&&level>=p[0]&&level<=p[1]})}
+function routeDestinations(){
+ const r=selectedRouteRow();if(!r)return [];
+ if(activePlan==='Leveling Route')return levelDestinations[r[0]]||[];
+ if(activePlan==='Warlock Talents'){const lev=Number(r[2]),band=getLevelRangeForTalent(lev);return band?(levelDestinations[band[0]]||[]):[]}
+ return [];
+}
+function routeStopRelevant(p){
+ if(activePlan==='All Stops')return false;
+ if(activePlan==='Leveling Route'||activePlan==='Warlock Talents')return false;
+ if(!p.plans.includes(activePlan))return false;
+ const row=selectedRouteRow(),text=guideTextForRow(),terms=(p.materials||[]).concat([p.name]);
+ if(terms.some(t=>t&&normalized(t).length>2&&text.includes(normalized(t))))return true;
+ if(p.kind==='trainer'||p.kind==='vendor')return overlap(parseRange(p.range),parseRange(currentRouteCopy()?.range));
+ return false;
+}
+function renderRouteStops(){
+ const holder=document.getElementById('routeStops');holder.innerHTML='';let items=[];
+ const destinations=routeDestinations();
+ if(destinations.length){
+  items=destinations.map(k=>({area:k,name:detailMaps[k].title,place:'Level route zone · '+(activePlan==='Warlock Talents'?'current talent level band':'character level step'),kind:'zone',detail:'Open this original zone map. No guessed quest pin is added.'}));
+ }else if(activePlan!=='All Stops')items=detailStops.filter(routeStopRelevant).map(p=>({area:p.area,name:p.name,place:p.place+' · '+formatCoord(p),kind:p.kind,detail:p.detail,stop:p}));
+ document.getElementById('routeStopCount').textContent=items.length?items.length+' STOPS':'';
+ if(!items.length){holder.innerHTML='<div class="poi-inspect">'+(activePlan==='All Stops'?'Choose a guide to see its route stops.':'No fixed-coordinate stop is associated with this row. Read the source note above; ingredients without a fixed node stay unpinned.')+'</div>';return}
+ items.slice(0,24).forEach(item=>{
+  const card=document.createElement('div');card.className='route-stop';
+  card.innerHTML='<span><strong>'+esc(item.name)+'</strong><small>'+esc(item.place)+'</small></span><button type="button">OPEN</button>';
+  card.querySelector('button').onclick=()=>{if(item.stop){openStop(item.stop)}else jumpToMap(item.area)};holder.append(card);
+ });
 }
 function renderZoneDetail(id){
- const z=zone(id);document.getElementById('detailTitle').textContent=z[1];document.getElementById('detailBand').textContent=(z[2]==='EK'?'EASTERN KINGDOMS':z[2]==='SKY'?'SKYWALL / ISLAND REGION':'KALIMDOR')+' • LEVEL '+z[3];document.getElementById('detailSummaryTitle').textContent=z[1]+' Field Notes';document.getElementById('detailSummaryText').textContent=z[8];document.getElementById('detailCoordinates').textContent='FARMING NOTE • '+z[9];
- const filt=document.getElementById('detailFilter').value;const all=makeZonePoints(id);visiblePoints=all.filter(p=>filt==='All Points'||p.layers.includes(filt)||(filt==='Dungeons'&&p.kind==='dungeon')||(filt==='Raids'&&p.kind==='raid'));
- const layer=document.getElementById('detailPoiLayer');layer.innerHTML='';const list=document.getElementById('poiList');list.innerHTML='';document.getElementById('poiCount').textContent=visiblePoints.length+' MARKERS';
- visiblePoints.forEach((p,i)=>{
-  const meta=poiMeta[p.kind]||poiMeta.quest,g=document.createElementNS(NS,'g');g.setAttribute('class','map-pin '+p.kind);g.setAttribute('transform','translate('+p.x+' '+p.y+')');g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label',p.name+' — '+p.place);g.dataset.poi=String(i);
-  const ring=document.createElementNS(NS,'circle');ring.setAttribute('class','pin-ring');ring.setAttribute('r','18');ring.setAttribute('stroke',meta.color);
-  const core=document.createElementNS(NS,'circle');core.setAttribute('class','pin-core');core.setAttribute('r','13');core.setAttribute('stroke',meta.color);
-  const icon=document.createElementNS(NS,'text');icon.setAttribute('class','pin-icon');icon.setAttribute('fill',meta.color);icon.textContent=meta.icon;
-  const label=document.createElementNS(NS,'text');label.setAttribute('class','pin-name');const labelRight=p.x<670;label.setAttribute('x',labelRight?'23':'-23');label.setAttribute('y',i%2===0?'4':'-18');label.setAttribute('text-anchor',labelRight?'start':'end');label.textContent=p.name.length>20?p.name.slice(0,19)+'…':p.name;
-  g.append(ring,core,icon,label);g.onclick=()=>selectPoi(i);g.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectPoi(i)}};layer.append(g);
-  const row=document.createElement('button');row.type='button';row.className='poi-row';row.innerHTML='<span class="poi-icon '+p.kind+'">'+meta.icon+'</span><span><strong>'+p.name+'</strong><small>'+p.place+' · '+p.layers.join(' / ')+(p.coord?' · '+p.coord:'')+'</small></span>';row.onclick=()=>selectPoi(i);list.append(row);
- });
- if(visiblePoints.length)selectPoi(0);else document.getElementById('poiInspect').textContent='No matching pins for this filter. Choose All Points to see every local stop.';
+ activeZoneId=id||activeZoneId;
+ const base=zoneMapRef[activeZoneId]||activeZoneId;activeArea=detailMaps[base]?base:'dun';
+ const areaSel=document.getElementById('detailArea');areaSel.value=activeArea;
+ currentMapContext();refreshMapImage();renderRouteStepCard();renderRouteStops();renderMapPins();resetMapView();
+}
+function jumpToMap(key){
+ if(!detailMaps[key])return;
+ activeArea=key;document.getElementById('detailArea').value=key;
+ currentMapContext();refreshMapImage();renderMapPins();resetMapView();
+}
+function openStop(p){
+ activeArea=p.area;document.getElementById('detailArea').value=p.area;
+ currentMapContext();refreshMapImage();renderRouteStepCard();renderRouteStops();renderMapPins();
+ const i=visiblePoints.indexOf(p);if(i>=0){selectPoi(i);requestAnimationFrame(()=>focusMapPoint(p))}
+ else if(p.x==null||p.y==null){const cmd=p.name==='Annora'?'/mappin 1418 66.0 43.0':'';document.getElementById('poiInspect').innerHTML='<strong>'+esc(p.name)+'</strong><br>'+esc(p.place)+'<br><b>No outdoor pin — interior map point</b><br>'+esc(p.detail)+(cmd?'<br><code>'+esc(cmd)+'</code> <button class="copy-map-command" type="button" data-command="'+esc(cmd)+'">COPY</button>':'')+'<span class="source-note"><a href="'+esc(p.source||'https://wow-forever.gg/atlas/')+'" target="_blank" rel="noopener">Source ↗</a></span>';document.querySelectorAll('.copy-map-command').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.command);b.textContent='COPIED'}catch(_){b.textContent='COPY FROM TEXT'}})}
 }
 function openZone(id){
- chosen=id;drawMap();const stage=document.getElementById('stage'),detail=document.getElementById('zoneExplorer');stage.classList.add('detail-open');detail.hidden=false;renderZoneDetail(id);stage.scrollIntoView({behavior:'smooth',block:'center'});
+ activeZoneId=id;chosen=id;drawMap();
+ const base=zoneMapRef[id]||id;if(detailMaps[base])activeArea=base;
+ const stage=document.getElementById('stage'),detail=document.getElementById('zoneExplorer');
+ stage.classList.add('detail-open');detail.hidden=false;
+ document.getElementById('detailArea').value=activeArea;renderZoneDetail(id);
+ stage.scrollIntoView({behavior:'smooth',block:'center'});
 }
-function closeZone(){document.getElementById('stage').classList.remove('detail-open');document.getElementById('zoneExplorer').hidden=true;document.getElementById('map').scrollIntoView({behavior:'smooth',block:'center'})}
-document.getElementById('worldReturn').onclick=closeZone;document.getElementById('detailFilter').onchange=()=>renderZoneDetail(chosen);
-
+function plotZone(id,layer){
+ const mapTab=document.querySelector('[data-p=map]');if(mapTab&&!mapTab.classList.contains('on'))mapTab.click();
+ activePlan=(layer&&['Tailoring','Enchanting','Cooking','First Aid','Leveling Route','Warlock Talents'].includes(layer))?layer:'All Stops';
+ document.getElementById('mapGuide').value=activePlan;populateStepPicker(true);openZone(id);
+}
+function closeZone(){
+ document.getElementById('stage').classList.remove('detail-open');document.getElementById('zoneExplorer').hidden=true;
+ document.getElementById('map').scrollIntoView({behavior:'smooth',block:'center'});
+}
+populateAreaPicker();
+document.getElementById('worldReturn').onclick=closeZone;
+document.getElementById('detailArea').onchange=e=>jumpToMap(e.target.value);
+document.getElementById('mapGuide').onchange=e=>{activePlan=e.target.value;populateStepPicker(true);renderRouteStepCard();renderRouteStops();renderMapPins()};
+document.getElementById('mapStep').onchange=e=>{activeStep=Number(e.target.value)||0;renderRouteStepCard();renderRouteStops();renderMapPins()};
+document.getElementById('detailFilter').onchange=renderMapPins;
+document.getElementById('zoomIn').onclick=()=>{mapZoom=Math.min(4.5,mapZoom*1.35);applyMapTransform()};
+document.getElementById('zoomOut').onclick=()=>{mapZoom=Math.max(1,mapZoom/1.35);applyMapTransform()};
+document.getElementById('zoomReset').onclick=resetMapView;
+document.getElementById('mapFullscreen').onclick=()=>{const shell=document.querySelector('.detail-map-shell');if(!document.fullscreenElement)shell.requestFullscreen?.();else document.exitFullscreen?.()};
+const mapViewport=document.getElementById('mapViewport');let mapDrag=null;
+mapViewport.addEventListener('pointerdown',e=>{if(e.target.closest('.map-pin,.map-zoom'))return;mapDrag={x:e.clientX,y:e.clientY,startX:mapX,startY:mapY,id:e.pointerId};mapViewport.classList.add('dragging');mapViewport.setPointerCapture?.(e.pointerId)});
+mapViewport.addEventListener('pointermove',e=>{if(!mapDrag)return;mapX=mapDrag.startX+(e.clientX-mapDrag.x);mapY=mapDrag.startY+(e.clientY-mapDrag.y);applyMapTransform()});
+const endDrag=()=>{mapDrag=null;mapViewport.classList.remove('dragging')};
+mapViewport.addEventListener('pointerup',endDrag);mapViewport.addEventListener('pointercancel',endDrag);
+mapViewport.addEventListener('wheel',e=>{if(document.getElementById('zoneExplorer').hidden)return;e.preventDefault();mapZoom=Math.max(1,Math.min(4.5,mapZoom*(e.deltaY<0?1.12:.89)));applyMapTransform()},{passive:false});
+mapViewport.addEventListener('dblclick',e=>{if(e.target.closest('.map-pin,.map-zoom'))return;mapZoom=Math.min(4.5,mapZoom*1.45);applyMapTransform()});
+document.getElementById('zoneMapArt').ondragstart=e=>e.preventDefault();
+document.getElementById('layer').onchange=()=>{drawMap();if(!document.getElementById('zoneExplorer').hidden){const pickVal=document.getElementById('layer').value;if(['Tailoring','Enchanting','Cooking','First Aid','Leveling','Warlock'].includes(pickVal)){activePlan=pickVal==='Leveling'?'Leveling Route':pickVal==='Warlock'?'Warlock Talents':pickVal;document.getElementById('mapGuide').value=activePlan;populateStepPicker(true);renderRouteStepCard();renderRouteStops();renderMapPins()}}};
+document.getElementById('bracket').onchange=drawMap;
 drawMap();
 </script></body></html>
